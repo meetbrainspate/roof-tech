@@ -7,7 +7,16 @@
       <div class="logo-track">
         {% for block in section.blocks %}
           <div class="logo-item">
-            <img src="{{ block.settings.logo | image_url }}" alt="{{ block.settings.logo.alt | escape }}">
+            {% assign image = block.settings.logo %}
+            {% if image %}
+            <img
+                src="{{ image | image_url }}"
+                alt="{{ image.alt | escape }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                loading="lazy"
+            >
+            {% endif %}
           </div>
         {% endfor %}
       </div>
@@ -19,7 +28,16 @@
       <div class="logo-track">
         {% for block in section.blocks %}
           <div class="logo-item">
-            <img src="{{ block.settings.logo | image_url }}" alt="{{ block.settings.logo.alt | escape }}">
+            {% assign image = block.settings.logo %}
+            {% if image %}
+            <img
+                src="{{ image | image_url }}"
+                alt="{{ image.alt | escape }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                loading="lazy"
+            >
+            {% endif %}
           </div>
         {% endfor %}
       </div>
