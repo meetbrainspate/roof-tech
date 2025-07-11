@@ -144,49 +144,57 @@
         "logo_TdP7dU": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/nabcep_certified.png"
+            "logo": "shopify://shop_images/nabcep_certified.png",
+            "link": ""
           }
         },
         "logo_3YaQGb": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/master_certified_badge.png"
+            "logo": "shopify://shop_images/master_certified_badge.png",
+            "link": ""
           }
         },
         "logo_7BC3iJ": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Screen_Shot_2024-04-30_at_8.30.14_AM.png"
+            "logo": "shopify://shop_images/Screen_Shot_2024-04-30_at_8.30.14_AM.png",
+            "link": ""
           }
         },
         "logo_zDPmEa": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/soligent.png"
+            "logo": "shopify://shop_images/soligent.png",
+            "link": ""
           }
         },
         "logo_EDwE3U": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/cooper_electric_supply_logo.jpg"
+            "logo": "shopify://shop_images/cooper_electric_supply_logo.jpg",
+            "link": ""
           }
         },
         "logo_gFVWLJ": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Butyl_Badge4.png"
+            "logo": "shopify://shop_images/Butyl_Badge4.png",
+            "link": ""
           }
         },
         "logo_6jehPg": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/AlphaSeal_updated_2023.png"
+            "logo": "shopify://shop_images/AlphaSeal_updated_2023.png",
+            "link": ""
           }
         },
         "logo_TUU777": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/lBorderStates-Logo-White-Text-l.png"
+            "logo": "shopify://shop_images/lBorderStates-Logo-White-Text-l.png",
+            "link": ""
           }
         }
       },
@@ -201,7 +209,9 @@
         "logo_TUU777"
       ],
       "name": "Logo Carousel",
-      "settings": {}
+      "settings": {
+        "title": "Our Distributors"
+      }
     },
     "featured_blog_fYgYkC": {
       "type": "featured-blog",
