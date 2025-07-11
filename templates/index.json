@@ -69,21 +69,21 @@
         "heading_cVNj9W": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "The next generation in rooftop solar mounting solutions",
             "heading_size": "h1"
           }
         },
         "text_GwwHGL": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Roof Tech is the first U.S. subsidiary of Yanegiken, a company renowned in Japan for more than four decades of innovative roofing technologies.</p><p>Roof Tech is the first U.S. subsidiary of Yanegiken, a company renowned in Japan for more than four decades of innovative roofing technologies. Roof Tech brings these unique PV mounting solutions to the U.S. solar market. Headquartered in Southern California, our national sales teams are now in place to provide superior service to installers and solar panel manufacturers throughout North America.</p>",
             "text_style": "body"
           }
         },
         "button_7Kq4Bx": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Read More",
             "button_link": "",
             "button_style_secondary": false
           }
