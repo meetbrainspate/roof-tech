@@ -6,35 +6,63 @@
     {% endif %}
   <div class="owl-carousel owl-carousel-row owl-carousel-top">
     {% for block in section.blocks %}
-      {% assign image = block.settings.logo %}
-      <div class="logo-item">
+        {% assign image = block.settings.logo %}
+        {% assign link = block.settings.link %}
+
+        <div class="logo-item">
         {% if image %}
-          <img
-            src="{{ image | image_url: width: 200 }}"
-            alt="{{ image.alt | escape }}"
-            width="{{ image.width }}"
-            height="{{ image.height }}"
-            loading="lazy"
-          >
+            {% if link != blank %}
+            <a href="{{ link }}" target="_blank" rel="noopener noreferrer">
+                <img
+                src="{{ image | image_url: width: 200 }}"
+                alt="{{ image.alt | escape }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                loading="lazy"
+                >
+            </a>
+            {% else %}
+            <img
+                src="{{ image | image_url: width: 200 }}"
+                alt="{{ image.alt | escape }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                loading="lazy"
+            >
+            {% endif %}
         {% endif %}
-      </div>
+        </div>
     {% endfor %}
   </div>
 
   <div class="owl-carousel owl-carousel-row owl-carousel-bottom">
     {% for block in section.blocks %}
-      {% assign image = block.settings.logo %}
-      <div class="logo-item">
+        {% assign image = block.settings.logo %}
+        {% assign link = block.settings.link %}
+
+        <div class="logo-item">
         {% if image %}
-          <img
-            src="{{ image | image_url: width: 200 }}"
-            alt="{{ image.alt | escape }}"
-            width="{{ image.width }}"
-            height="{{ image.height }}"
-            loading="lazy"
-          >
+            {% if link != blank %}
+            <a href="{{ link }}" target="_blank" rel="noopener noreferrer">
+                <img
+                src="{{ image | image_url: width: 200 }}"
+                alt="{{ image.alt | escape }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                loading="lazy"
+                >
+            </a>
+            {% else %}
+            <img
+                src="{{ image | image_url: width: 200 }}"
+                alt="{{ image.alt | escape }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                loading="lazy"
+            >
+            {% endif %}
         {% endif %}
-      </div>
+        </div>
     {% endfor %}
   </div>
 </section>
