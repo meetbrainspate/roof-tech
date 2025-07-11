@@ -222,6 +222,24 @@
           "settings": {
             "logo": "shopify://shop_images/cooper_electric_supply_logo.jpg"
           }
+        },
+        "logo_gFVWLJ": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Butyl_Badge4.png"
+          }
+        },
+        "logo_6jehPg": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/AlphaSeal_updated_2023.png"
+          }
+        },
+        "logo_TUU777": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/lBorderStates-Logo-White-Text-l.png"
+          }
         }
       },
       "block_order": [
@@ -229,7 +247,10 @@
         "logo_3YaQGb",
         "logo_7BC3iJ",
         "logo_zDPmEa",
-        "logo_EDwE3U"
+        "logo_EDwE3U",
+        "logo_gFVWLJ",
+        "logo_6jehPg",
+        "logo_TUU777"
       ],
       "name": "Logo Carousel",
       "settings": {}
