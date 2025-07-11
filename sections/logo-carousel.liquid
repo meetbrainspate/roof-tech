@@ -1,4 +1,9 @@
 <section class="logo-carousel-section">
+    {% if section.settings.title != blank %}
+    <div class="logo-carousel-heading">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    {% endif %}
   <div class="owl-carousel owl-carousel-row owl-carousel-top">
     {% for block in section.blocks %}
       {% assign image = block.settings.logo %}
@@ -37,6 +42,15 @@
 <style>
 .logo-carousel-section {
   padding: 2rem 0;
+}
+.logo-carousel-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-carousel-heading h2 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 .logo-item {
   text-align: center;
@@ -93,6 +107,14 @@
 {% schema %}
 {
   "name": "Logo Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Our Distributors"
+    }
+  ],
   "max_blocks": 20,
   "blocks": [
     {
