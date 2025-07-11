@@ -189,6 +189,22 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "logo_carousel_QKwnw6": {
+      "type": "logo-carousel",
+      "blocks": {
+        "logo_TdP7dU": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/nabcep_certified.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_TdP7dU"
+      ],
+      "name": "Logo Carousel",
+      "settings": {}
     }
   },
   "order": [
@@ -196,6 +212,7 @@
     "image_with_text_m86jHG",
     "featured_collection",
     "featured_blog_fYgYkC",
-    "newsletter_axYwtH"
+    "newsletter_axYwtH",
+    "logo_carousel_QKwnw6"
   ]
 }
