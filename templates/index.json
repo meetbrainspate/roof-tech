@@ -198,10 +198,38 @@
           "settings": {
             "logo": "shopify://shop_images/nabcep_certified.png"
           }
+        },
+        "logo_3YaQGb": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/master_certified_badge.png"
+          }
+        },
+        "logo_7BC3iJ": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Screen_Shot_2024-04-30_at_8.30.14_AM.png"
+          }
+        },
+        "logo_zDPmEa": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/soligent.png"
+          }
+        },
+        "logo_EDwE3U": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/cooper_electric_supply_logo.jpg"
+          }
         }
       },
       "block_order": [
-        "logo_TdP7dU"
+        "logo_TdP7dU",
+        "logo_3YaQGb",
+        "logo_7BC3iJ",
+        "logo_zDPmEa",
+        "logo_EDwE3U"
       ],
       "name": "Logo Carousel",
       "settings": {}
