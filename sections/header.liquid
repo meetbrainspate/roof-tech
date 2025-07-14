@@ -77,7 +77,7 @@
 
   .custom-header-row {
     width: 100%;
-    padding: 10px 20px;
+    padding: 8px 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,21 +85,39 @@
   }
 
   .custom-header-top {
-    background-color: #f7f7f7;
-    font-size: 13px;
-    border-bottom: 1px solid #ddd;
+    background-color: #F5F5F5;
+    font-size: 12px;
+    border-bottom: 1px solid #E8E8E8;
   }
 
   .custom-header-top .custom-header-social a {
-    margin-right: 12px;
+    margin-right: 8px;
     color: #444;
     text-decoration: none;
+    display: inline-block;
   }
-
+  .custom-header-top .custom-header-social a:not(:last-child) {
+      padding-right: 8px;
+      border-right: 1px solid #D9DDE3;
+  }
+  .custom-header-contact > span, .custom-header-contact  {
+    display: flex;
+    align-items: center;
+  }
+  .custom-header-contact a {
+    color:#000000;
+    text-decoration: none;
+  } 
+  .custom-header-contact a:hover{
+    color: #D52722;
+  }
   .custom-header-contact span {
-    margin-left: 15px;
+    margin-left: 8px;
   }
-
+  .custom-header-contact span:not(:last-child){
+    padding-right: 8px;
+    border-right: 1px solid #D9DDE3;
+  }
   .custom-header-middle {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -116,13 +134,16 @@
     margin: 0 15px;
     text-decoration: none;
   }
+  .custom-header-social {
+    line-height: 1;
+  } 
 
 </style>
 
 {%- style -%}
-  .header {
+  /* .header {
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
-  }
+  } */
 
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
@@ -136,10 +157,10 @@
   }
 
   @media screen and (min-width: 990px) {
-    .header {
+    /* .header {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+    } */
   }
 {%- endstyle -%}
 
@@ -179,16 +200,25 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} {% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     <div class="custom-header-row custom-header-top">
       <div class="custom-header-social">
-        <a href="https://facebook.com" target="_blank">Fb</a>
-        <a href="https://linkedin.com" target="_blank">Ln</a>
-        <a href="https://instagram.com" target="_blank">Ig</a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="{{ 'facebook-icon.svg' | asset_url }}" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank">
+          <img src="{{ 'twitter-icon.svg' | asset_url }}" />
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <img src="{{ 'linkedin-icon.svg' | asset_url }}" />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="{{ 'instagram-icon.svg' | asset_url }}" />
+        </a>
       </div>
       <div class="custom-header-contact">
-        <span>(858) 935-6064</span>
-        <span>sales@roof-tech.us, info@roof-tech.us</span>
+        <span><img src="{{ 'phone-icon.svg' | asset_url }}" /> <a href="tel:8589356064"><span>(858) 935-6064</span></a></span>
+        <span><img src="{{ 'enevelope-icon.svg' | asset_url }}" /><span><a href="mailto:sales@roof-tech.us">sales@roof-tech.us</a>, <a href="mailto:info@roof-tech.us">info@roof-tech.us</a></span></span>
       </div>
     </div>
     <!-- Row 2: Logo + Search + Cart + Avatar -->
