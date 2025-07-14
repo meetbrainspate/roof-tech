@@ -175,9 +175,9 @@
         "collapsible_row_cn3WjH": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "What PV Modules are listed under the UL 2703?",
+            "icon": "none",
+            "row_content": "<p>Listed PV modules can be found on the Installation Manual</p>",
             "page": ""
           }
         },
