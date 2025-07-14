@@ -193,9 +193,63 @@
         "collapsible_row_PHfhWf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
+            "heading": "Is it economical?",
+            "icon": "none",
             "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_8m3wew": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Roof Tech’s flashing method code compliant?",
+            "icon": "none",
+            "row_content": "<p>Yes. It is fully Code Compliant with the IBC (International Building Code) and IRC and it carries an ICC-ESR 3575 Evaluation Report against water intrusion and for durability.<br/>Roof Tech is the First and only, to provide a Proven and Certified Mounting System for the Installation of LEAK PROOF PV Systems on steep slope and low slope roofs.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_eJfhxf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How about if a roof needs to be replaced, can the mounts be reapplied?",
+            "icon": "none",
+            "row_content": "<p>It is possible to reuse the mounts, however the AlphaSeal® must be removed and a new one must be reapplied. The best way to remove the old tape is after being left on a freezer overnight.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dPUUJK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I substitute the stainless 304 (5x60mm) wooden screws with my own sourced screws?",
+            "icon": "none",
+            "row_content": "<p>Substituting the wood screws will void the RT warranty. Also the structural stamped letters provided by Roof Tech will not validate a different screw.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WfFKYA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I see RT offers a 25 year warranty. Other manufacturers do offer the same. What distinguishes Roof Tech’s warranty?",
+            "icon": "none",
+            "row_content": "<p>Roof Tech, being a subsidiary from Japan’s Yanegiken who brings over 50 years innovation in roofing technologies and PV mounting solutions since 1994. This alone is close to 30 years on PV mounting design and fabrication. To top it off, this warranty extends to the RT Butyl which is the only flashing system that totally seals a penetration on the roof.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8XmTjL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I install Roof Tech on a metal roof?",
+            "icon": "none",
+            "row_content": "<p>Yes, however you will want to look for the instructions posted on the installation manual. The stainless screw doesn’t cut through the metal so a pilot hole is necessary (only in the metal). The wood underneath must be kept intact for the woods screws.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hNqnmN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I install the RT-MINI on a tilted mounting system?",
+            "icon": "none",
+            "row_content": "<p>The Structural PE letters provided by Roof Tech are prepared for a flush mount system only. A tilted racking system can be evaluated by structural engineers on a custom basis.</p>",
             "page": ""
           }
         }
@@ -204,7 +258,13 @@
         "collapsible_row_amnYje",
         "collapsible_row_cn3WjH",
         "collapsible_row_3nmV9w",
-        "collapsible_row_PHfhWf"
+        "collapsible_row_PHfhWf",
+        "collapsible_row_8m3wew",
+        "collapsible_row_eJfhxf",
+        "collapsible_row_dPUUJK",
+        "collapsible_row_WfFKYA",
+        "collapsible_row_8XmTjL",
+        "collapsible_row_hNqnmN"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
