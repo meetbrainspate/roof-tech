@@ -75,7 +75,12 @@
 }
 
 /* base */
-
+:root {
+  --font-body-family: "Onest", sans-serif !important;
+}
+body{
+  font-family: "Onest", sans-serif;
+}
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
@@ -491,8 +496,9 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: inherit;
+  font-weight: 500;
 }
 
 .link--text {

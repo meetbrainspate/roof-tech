@@ -15,6 +15,7 @@
         "slide_bMRz8p": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/home-banner-1.png",
             "image_overlay_opacity": 0,
             "heading": "Image slide",
             "heading_size": "h1",
@@ -32,6 +33,7 @@
         "slide_EWdGQ9": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/home-banner-1.png",
             "image_overlay_opacity": 0,
             "heading": "Image slide",
             "heading_size": "h1",

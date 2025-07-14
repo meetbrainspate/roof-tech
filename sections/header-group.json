@@ -25,6 +25,7 @@
       "block_order": [
         "announcement-bar-0"
       ],
+      "disabled": true,
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -50,7 +51,7 @@
         "enable_language_selector": true,
         "enable_customer_avatar": true,
         "margin_bottom": 0,
-        "padding_top": 20,
+        "padding_top": 0,
         "padding_bottom": 20
       }
     }
