@@ -159,11 +159,74 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_rc3Knr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_amnYje": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What type of certifications are available? www.roof-tech.us",
+            "icon": "none",
+            "row_content": "<p>-ICC (International Code Council) ESR 3575 Evaluation Report for water Resistance and Durability & Compliance with IBC and IRC 2012, 2009 and 2006 Codes.<br/>-Stamped PE reports for 38 States (IRC & IBC 2018 & 2015) ASTM D1761<br/>-UL 2703<br/>-ASTM 2140</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cn3WjH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_3nmV9w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_PHfhWf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_amnYje",
+        "collapsible_row_cn3WjH",
+        "collapsible_row_3nmV9w",
+        "collapsible_row_PHfhWf"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Code Compliance:</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "collapsible_content_Uw7VCC",
-    "collapsible_content_JfirJi"
+    "collapsible_content_JfirJi",
+    "collapsible_content_rc3Knr"
   ]
 }
