@@ -105,6 +105,33 @@
             "row_content": "<p>It is all-in-one PV mounting system, the one and only fully waterproof with an integrated flexible flashing that will perform to the test of time. Secondly, it’s fastened to the roof rafters or direct to the decking (not lagged), minimizing the impact to the roof penetrations. Thermal contraction and expansion of the array (roof torsion) can be minimized with the rail-less and also short lengths on the rails, a basic design technique to maintain the integrity of the array and the roof penetrations sealability. Being that 5 mm (3/16”) stainless wood screws are used to secure the mounts to the rafters, there is a minimum risk to split the rafter and the contractor finds it easier to comply with code based on the NDS (National Design Specification for Wood Construction). A 5/16” Lag bolt for instance, need to have a pilot hole and the correct positioning of the lag bolt on top of the rafter (parallel to the grain) is very narrow, the mid third which is about 9/16” in length. It becomes very difficult for the installer to locate it from the top of the roof. This same area becomes 60% longer with the use of RT’s 5mm diameter screws, making it much easier for the contractor to have a code compliant PV Installation.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_FVFgch": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why is the finish covered for only 5 years?",
+            "icon": "none",
+            "row_content": "<p>In general, aluminum coatings and paints are susceptible to color fading due to UV light, rain and wind. For this reason, the warranty period for the finish is limited to 5 years.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_P7AF4X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "The structural warranty is 25 years, what’s covered?",
+            "icon": "none",
+            "row_content": "<p>The 25 year structural warranty covers material structural defect. Products are warranted against structural failure due to cracking, buckling, bending, or tearing arising under normal use and environmental conditions, for the warranty period</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hjtqLA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "It doesn’t say leaks are covered…. are leaks covered in the 25 year warranty?",
+            "icon": "none",
+            "row_content": "<p>The 25 year warranty covers leaks due to material defect of Roof Tech products. It doesn’t cover leaks due to damaged roofing materials, aging roofs, inadequate installation, etc.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -112,7 +139,10 @@
         "collapsible_row_YHeqrn",
         "collapsible_row_niAW3C",
         "collapsible_row_X7jPkE",
-        "collapsible_row_tzbmfX"
+        "collapsible_row_tzbmfX",
+        "collapsible_row_FVFgch",
+        "collapsible_row_P7AF4X",
+        "collapsible_row_hjtqLA"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
