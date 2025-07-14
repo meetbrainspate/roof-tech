@@ -96,7 +96,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "youtube_video_link": "https://youtu.be/ujwq0PpUqr8",
+        "youtube_video_link": "ujwq0PpUqr8",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
