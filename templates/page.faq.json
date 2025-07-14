@@ -15,9 +15,278 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "collapsible_content_Uw7VCC": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_GUPxLF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Roof Tech products can be installed on rafters and direct to the roof decking",
+            "icon": "none",
+            "row_content": "<p>Yes. Testing was performed on 7/16” OSB (24/16 APA), 15/32” Plywood, all above 2”X 4”’s, 24”o.c. rafters as well as rafter/joist attachments. Direct attachment to planks or skip sheathing are not recommended. The reports are available based on the ASCE 7-10 and ASCE 7-16 (IBC, IRC 2018 codes). The PE Reports can be downloaded at https://roof-tech.us/support/ All you need is to cross reference it against the requirements from your local AHJ (Authority Having Jurisdiction).<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_P4H7Pr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is AlphaSeal®?",
+            "icon": "none",
+            "row_content": "<p>AlphaSeal®, is Roof tech’s flexible flashing, a proprietary butyl tape that has been the flashing system developed by Roof Tech’s parent company Yanegiken and in use since 1994 in Japan. One of its main applications are inner tubes, asphalt roofing related products and flexible flashing for the building industry. It offers superior flexibility, it’s impermeable to moisture and it’s resistant to mildew, acids alkalis and salts. AlphaSeal® has a temperature range between minus 40 to 248 degrees Fahrenheit. AlphaSeal®is compatible with asphalt, EPDM, TPO and metal roofing materials. To date, there are over 1,000,000 PV Residences in Japan and US with the very same AlphaSeal® deployed for the past 25 years.<br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_GUPxLF",
+        "collapsible_row_P4H7Pr"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Why Roof Tech, Inc:</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_JfirJi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_CFyHjJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Roof Tech Warranty",
+            "icon": "none",
+            "row_content": "<p>Roof Tech offers a 25 Yr. Limited Warranty</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YHeqrn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "And what about the AlphaSeal® service life?",
+            "icon": "none",
+            "row_content": "<p>The service life is 25 Yr. minimum. (Covered by Roof Tech’s Warranty)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_niAW3C": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "If we are installing RT-[E] Mount on a 30 year roof, how do we know the mounts won’t need to be re-sealed?",
+            "icon": "none",
+            "row_content": "<p>This is a good question for all flashingmanufacturers actually. AlphaSeal® is far superior to any sealants commonly used with solar flashings, you can ask folks involved in the building industry. If you look closely to any flashing method in the market, you will notice that after all, it is the sealant applied to the penetration that ultimately seals it. So, I’ll answer it with a question; how long will that sealant (a.k.a. caulking) perform?<br/>We know that it will not last long and towards its end, it will become brittle with cracks.<br/>Notice that the upper limit service temperature of sealants is under 200F and keep in mind that the PV array can get as hot as up to 60F above the ambient temperature. We have performed 7,500 hr. accelerated aging testing of theAlphaSeal®. The result? Only AlphaSeal® remained flexible performing its sealant function to protect the roof underlayment and decking.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_X7jPkE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does RT Apex (Rail-less) get adjusted to compensate for discrepancies on a roof?",
+            "icon": "none",
+            "row_content": "<p>RT APEX has a one-step leveling (single tool) 1 ¼” adjustment</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tzbmfX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the main advantage of using Roof Tech products?",
+            "icon": "none",
+            "row_content": "<p>It is all-in-one PV mounting system, the one and only fully waterproof with an integrated flexible flashing that will perform to the test of time. Secondly, it’s fastened to the roof rafters or direct to the decking (not lagged), minimizing the impact to the roof penetrations. Thermal contraction and expansion of the array (roof torsion) can be minimized with the rail-less and also short lengths on the rails, a basic design technique to maintain the integrity of the array and the roof penetrations sealability. Being that 5 mm (3/16”) stainless wood screws are used to secure the mounts to the rafters, there is a minimum risk to split the rafter and the contractor finds it easier to comply with code based on the NDS (National Design Specification for Wood Construction). A 5/16” Lag bolt for instance, need to have a pilot hole and the correct positioning of the lag bolt on top of the rafter (parallel to the grain) is very narrow, the mid third which is about 9/16” in length. It becomes very difficult for the installer to locate it from the top of the roof. This same area becomes 60% longer with the use of RT’s 5mm diameter screws, making it much easier for the contractor to have a code compliant PV Installation.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FVFgch": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why is the finish covered for only 5 years?",
+            "icon": "none",
+            "row_content": "<p>In general, aluminum coatings and paints are susceptible to color fading due to UV light, rain and wind. For this reason, the warranty period for the finish is limited to 5 years.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_P7AF4X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "The structural warranty is 25 years, what’s covered?",
+            "icon": "none",
+            "row_content": "<p>The 25 year structural warranty covers material structural defect. Products are warranted against structural failure due to cracking, buckling, bending, or tearing arising under normal use and environmental conditions, for the warranty period</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hjtqLA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "It doesn’t say leaks are covered…. are leaks covered in the 25 year warranty?",
+            "icon": "none",
+            "row_content": "<p>The 25 year warranty covers leaks due to material defect of Roof Tech products. It doesn’t cover leaks due to damaged roofing materials, aging roofs, inadequate installation, etc.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_CFyHjJ",
+        "collapsible_row_YHeqrn",
+        "collapsible_row_niAW3C",
+        "collapsible_row_X7jPkE",
+        "collapsible_row_tzbmfX",
+        "collapsible_row_FVFgch",
+        "collapsible_row_P7AF4X",
+        "collapsible_row_hjtqLA"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Warranty:</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_rc3Knr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_amnYje": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What type of certifications are available? www.roof-tech.us",
+            "icon": "none",
+            "row_content": "<p>-ICC (International Code Council) ESR 3575 Evaluation Report for water Resistance and Durability & Compliance with IBC and IRC 2012, 2009 and 2006 Codes.<br/>-Stamped PE reports for 38 States (IRC & IBC 2018 & 2015) ASTM D1761<br/>-UL 2703<br/>-ASTM 2140</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cn3WjH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What PV Modules are listed under the UL 2703?",
+            "icon": "none",
+            "row_content": "<p>Listed PV modules can be found on the Installation Manual</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3nmV9w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I install power electronics such as a micro inverter?",
+            "icon": "none",
+            "row_content": "<p>The RT-[E] Mount Air and APEX have a minimum 3” clearance which is enough for most micro inverters and optimizers. Please double check it with the specifications of the product you intend to install.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PHfhWf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it economical?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_8m3wew": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Roof Tech’s flashing method code compliant?",
+            "icon": "none",
+            "row_content": "<p>Yes. It is fully Code Compliant with the IBC (International Building Code) and IRC and it carries an ICC-ESR 3575 Evaluation Report against water intrusion and for durability.<br/>Roof Tech is the First and only, to provide a Proven and Certified Mounting System for the Installation of LEAK PROOF PV Systems on steep slope and low slope roofs.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_eJfhxf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How about if a roof needs to be replaced, can the mounts be reapplied?",
+            "icon": "none",
+            "row_content": "<p>It is possible to reuse the mounts, however the AlphaSeal® must be removed and a new one must be reapplied. The best way to remove the old tape is after being left on a freezer overnight.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dPUUJK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I substitute the stainless 304 (5x60mm) wooden screws with my own sourced screws?",
+            "icon": "none",
+            "row_content": "<p>Substituting the wood screws will void the RT warranty. Also the structural stamped letters provided by Roof Tech will not validate a different screw.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WfFKYA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I see RT offers a 25 year warranty. Other manufacturers do offer the same. What distinguishes Roof Tech’s warranty?",
+            "icon": "none",
+            "row_content": "<p>Roof Tech, being a subsidiary from Japan’s Yanegiken who brings over 50 years innovation in roofing technologies and PV mounting solutions since 1994. This alone is close to 30 years on PV mounting design and fabrication. To top it off, this warranty extends to the RT Butyl which is the only flashing system that totally seals a penetration on the roof.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8XmTjL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I install Roof Tech on a metal roof?",
+            "icon": "none",
+            "row_content": "<p>Yes, however you will want to look for the instructions posted on the installation manual. The stainless screw doesn’t cut through the metal so a pilot hole is necessary (only in the metal). The wood underneath must be kept intact for the woods screws.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hNqnmN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I install the RT-MINI on a tilted mounting system?",
+            "icon": "none",
+            "row_content": "<p>The Structural PE letters provided by Roof Tech are prepared for a flush mount system only. A tilted racking system can be evaluated by structural engineers on a custom basis.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_amnYje",
+        "collapsible_row_cn3WjH",
+        "collapsible_row_3nmV9w",
+        "collapsible_row_PHfhWf",
+        "collapsible_row_8m3wew",
+        "collapsible_row_eJfhxf",
+        "collapsible_row_dPUUJK",
+        "collapsible_row_WfFKYA",
+        "collapsible_row_8XmTjL",
+        "collapsible_row_hNqnmN"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Code Compliance:</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collapsible_content_Uw7VCC",
+    "collapsible_content_JfirJi",
+    "collapsible_content_rc3Knr"
   ]
 }
