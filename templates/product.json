@@ -102,11 +102,28 @@
     },
     "product_tabs_peWhYV": {
       "type": "product-tabs",
+      "blocks": {
+        "tab_wHnkCh": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Description",
+            "tab_content": "{{ product.description }}"
+          }
+        },
+        "tab_KUcMKy": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Shipping & Return",
+            "tab_content": "<p>Tab content goes here.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_wHnkCh",
+        "tab_KUcMKy"
+      ],
       "name": "Product Tabs",
-      "settings": {
-        "shipping_content": "",
-        "specs_content": ""
-      }
+      "settings": {}
     }
   },
   "order": [
