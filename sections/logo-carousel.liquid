@@ -73,7 +73,7 @@
 }
 .logo-carousel-heading {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4.5rem;
 }
 .logo-item {
   text-align: center;
@@ -87,6 +87,25 @@
   display: flex;
   align-items: center;
 }
+.logo-item {
+    border: 1px solid #EAEAEA;
+    width: 200px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+}
+.logo-item img {
+    max-height: 78px;
+    object-fit: contain;
+}
+@media screen and (min-width: 1600px){
+  .logo-item {
+    width: 250px;
+    height: 110px;
+}
+}
 </style>
 
 <script>
@@ -95,16 +114,18 @@
       loop: true,
       margin: 20,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 5000,
       autoplayHoverPause: true,
-      autoplaySpeed: 3000,
-      smartSpeed: 3000,
+      autoplaySpeed: 5000,
+      smartSpeed: 5000,
       slideTransition: 'linear',
       rtl: false,
       responsive: {
         0: { items: 2 },
         600: { items: 4 },
-        1000: { items: 6 }
+        1000: { items: 5 },
+        1300: { items: 6 },
+        1600: { items: 7 }
       }
     });
 
@@ -112,16 +133,18 @@
       loop: true,
       margin: 20,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 5000,
       autoplayHoverPause: true,
-      autoplaySpeed: 3000,
-      smartSpeed: 3000,
+      autoplaySpeed: 5000,
+      smartSpeed: 5000,
       slideTransition: 'linear',
       rtl: true, /* Reverse direction */
       responsive: {
         0: { items: 2 },
         600: { items: 4 },
-        1000: { items: 6 }
+        1000: { items: 5 },
+        1300: { items: 6 },
+        1600: { items: 7 }
       }
     });
   });
