@@ -170,6 +170,12 @@
                 <p>{{ block.settings.subheading }}</p>
               </div>
             {%- endif -%}
+            {%- if block.settings.subheading_2 != blank -%}
+              <div class="banner__text rte">
+                <p>{{ block.settings.subheading_2 }}</p>
+              </div>
+            {%- endif -%}
+
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons">
                 <a
@@ -448,6 +454,12 @@
           "id": "subheading",
           "default": "t:sections.slideshow.blocks.slide.settings.subheading.default",
           "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subheading_2",
+          "default": "<p>Default subheading text</p>",
+          "label": "Subheading 2"
         },
         {
           "type": "header",
