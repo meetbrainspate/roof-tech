@@ -57,6 +57,7 @@
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
+            "subheading_2": "<p>Default subheading text</p>",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -288,6 +289,27 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "testimonial_section_nD9yEB": {
+      "type": "testimonial-section",
+      "blocks": {
+        "testimonial_GNFFy9": {
+          "type": "testimonial",
+          "settings": {
+            "text": "test",
+            "image": "shopify://shop_images/joining__hands_badge.png",
+            "name": "Name",
+            "designation": "Designation"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_GNFFy9"
+      ],
+      "name": "Testimonial Section",
+      "settings": {
+        "heading": "What They’re Talking About Company?"
+      }
     }
   },
   "order": [
@@ -296,6 +318,7 @@
     "featured_collection",
     "logo_carousel_QKwnw6",
     "featured_blog_fYgYkC",
-    "newsletter_axYwtH"
+    "newsletter_axYwtH",
+    "testimonial_section_nD9yEB"
   ]
 }
