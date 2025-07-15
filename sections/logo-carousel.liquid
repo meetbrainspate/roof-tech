@@ -1,7 +1,7 @@
 <section class="logo-carousel-section">
     {% if section.settings.title != blank %}
     <div class="logo-carousel-heading">
-      <h2>{{ section.settings.title }}</h2>
+      <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
     </div>
     {% endif %}
   <div class="owl-carousel owl-carousel-row owl-carousel-top">
@@ -74,11 +74,6 @@
 .logo-carousel-heading {
   text-align: center;
   margin-bottom: 2rem;
-}
-
-.logo-carousel-heading h2 {
-  font-size: 2rem;
-  font-weight: 600;
 }
 .logo-item {
   text-align: center;

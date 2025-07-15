@@ -1006,8 +1006,8 @@ summary::-webkit-details-marker {
   }
 
   .grid--4-col-desktop .grid__item {
-    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 2);
+    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 2);
   }
 
   .grid--3-col-desktop .grid__item {
@@ -2363,6 +2363,45 @@ input[type='checkbox'] {
   align-items: center;
 }
 
+li:has(a#HeaderMenu-contact-us) {
+    position: absolute;
+    right: 70px;
+}
+li a#HeaderMenu-contact-us {
+      font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #D52722;
+    line-height: 1.5;
+    background: #ffffff;
+    position: relative;
+    padding: 10px 20px;
+    padding-right: 40px;
+    transition: 0.3s all;
+}
+li a#HeaderMenu-contact-us:after{
+    content: " ";
+    background-image: url(./right-arrow-white-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(20%) saturate(4243%) hue-rotate(332deg) brightness(79%) contrast(119%);
+    width: 15px;
+    height: 8px;
+    position: absolute;
+    right: 18px;
+}
+li a#HeaderMenu-contact-us:hover{
+    color: #ffffff;
+    background: #D52722;
+    text-decoration: none !important;
+}
+li a#HeaderMenu-contact-us:hover span{
+  text-decoration: none;
+}
+li a#HeaderMenu-contact-us:hover:after{
+  filter: brightness(0) invert(1);
+}
+
 @media screen and (max-width: 749px) {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
@@ -2697,6 +2736,65 @@ details[open] .modal-overlay::after {
   position: absolute;
   right: 0.3rem;
 }
+form.search.search-modal__form .field:after {
+    box-shadow: none;
+}
+form.search.search-modal__form {
+    border: 1px solid #E2E2E2;
+    box-shadow: 0px 2px 2px 0px #D9DDE34D;
+}
+
+  form.search.search-modal__form button.search__button.field__button {
+      background: #D52722;
+      color: #ffffff;
+      padding: 12px 28px;
+      top: 2px;
+      right: 2px;
+      width: auto;
+  }
+  form.search.search-modal__form input {
+    margin: 2px;
+    padding: 16px 20px;
+    padding-left: 60px;
+  }
+  form.search.search-modal__form button.search__button.field__button .svg-wrapper{
+    display: none;
+  }
+  form.search.search-modal__form button.search__button.field__button:before {
+    content: "Search";
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  form.search.search-modal__form input:focus {
+    box-shadow: 0 0 0 calc(0.1rem rgba(var(--color-foreground)));
+  }
+  form.search.search-modal__form label.field__label {
+      padding-left: 60px;
+      color: #B4B4B4;
+      font-size: 14px;
+      top: 1.4rem;
+      font-weight: 400;
+      left: 0;
+  }
+  .field__input:focus ~ .field__label, .field__input:not(:placeholder-shown) ~ .field__label {
+      display: none;
+  }
+  form.search.search-modal__form .field::before {
+    inset: auto;
+    background-image: url(./saerch-icon.svg);
+    position: absolute;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    top: 12px;
+    z-index: 1;
+    box-shadow: none;
+}
 
 @media screen and (min-width: 750px) {
   .search-modal__close-button {
@@ -2798,7 +2896,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
+  padding: 0.9rem 1.2rem;
   text-decoration: none;
   color: #ffffff;
 }
@@ -3660,4 +3758,106 @@ h2.inline-richtext {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0;
+}
+.product-section{
+  background-image: url(./our-prodcuts-banner.png);
+  background-attachment: unset;
+  background-repeat: no-repeat;
+      height: 450px;
+} 
+.product-section:before {
+    content: "";
+    background-color: rgb(0 0 0 / 80%);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.product-section .collection__title.title-wrapper h2 {
+    color: #FFFFFF;
+}
+.product-section slider-component{
+  padding: 0 1.5rem;
+      z-index: 1;
+}
+.product-section slider-component ul {
+    min-height: 400px;
+    width: 100%;
+    column-gap: 20px;
+}
+.product-section slider-component ul li {
+    box-shadow: 0px 4px 24px 0px #00000026;
+    background: #FFFFFF;
+    padding: 20px;
+}
+.product-section slider-component ul li h3 {
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.product-section slider-component ul li h3 a, .product-section slider-component ul li h3 a:hover{
+  text-decoration: none !important;
+}
+.product-section slider-component ul li .card-information {
+    display: none;
+}
+.card__content button.quick-add__submit {
+    text-transform: uppercase;
+    border: 1px solid #D52722;
+    outline: none !important;
+    width: auto;
+    display: inline-block;
+    min-width: auto;
+    padding: 17px 50px 17px 28px;
+    color: #D52722;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: transparent;
+    transition: 0.3s all;
+}
+.card__content button.quick-add__submit::before{display: none;}
+.card__content button.quick-add__submit::after{
+    content: "";
+  background-image: url(./right-arrow-white-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center right 26px;
+  transition: 0.3s all;
+  box-shadow: none;
+  filter: brightness(0) saturate(100%) invert(38%) sepia(20%) saturate(4243%) hue-rotate(332deg) brightness(79%) contrast(119%);
+}
+.card__content button.quick-add__submit:hover{
+  color: #ffffff;
+  background-color: #D52722;
+}
+.card__content button.quick-add__submit:hover::after{
+  filter: brightness(0) invert(1);
+  box-shadow: none;
+}
+.product-section .collection__title.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shopify-section:has(.logo-carousel-section){
+    position: relative;
+}
+.shopify-section:has(.logo-carousel-section) .logo-carousel-section {
+    padding-top: 200px;
+}
+.shopify-section:has(.logo-carousel-section):before {
+    background-position: top;
+    width: 100%;
+    content: "";
+    background-image: url(./footer-bg-pattern.png);
+    background-repeat: repeat;
+    background-size: auto;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+section.shopify-section:has(.product-section){
+  z-index: 1;
+  position: relative;
 }

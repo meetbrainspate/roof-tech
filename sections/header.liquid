@@ -196,6 +196,22 @@
   .slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {
     display: none;
   }
+  .slideshow__text .banner__text.rte.desc p {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: unset;
+  }
+  .banner__text.rte.desc {
+    border-left: 5px solid #D52722;
+    padding-left: 20px;
+  }
+  .custom-header-row.custom-header-bottom {
+    padding: 6px 70px;
+  }
+  a.header__icon--account {
+    margin-right: 24px;
+  }
 
 </style>
 
@@ -368,6 +384,8 @@
         {%- endif -%}
       {%- endif -%}
 
+      {% render 'header-search', input_id: 'Search-In-Modal' %} 
+
       <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
         <div class="desktop-localization-wrapper">
           {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -392,7 +410,8 @@
             </localization-form>
           {%- endif -%}
         </div>
-        {% render 'header-search', input_id: 'Search-In-Modal' %}
+        
+        {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
 
         {%- if shop.customer_accounts_enabled -%}
           <a
