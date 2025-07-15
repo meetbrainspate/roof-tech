@@ -57,6 +57,7 @@
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
+            "subheading_2": "<p>Default subheading text</p>",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -288,6 +289,27 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "testimonial_section_HC9rTB": {
+      "type": "testimonial-section",
+      "blocks": {
+        "testimonial_YVagLx": {
+          "type": "testimonial",
+          "settings": {
+            "text": "test1",
+            "image": "shopify://shop_images/canada_flag_4b9a2615-0277-42c3-b74d-03ba31befdc3.png",
+            "name": "hello 2",
+            "designation": "hello 3"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_YVagLx"
+      ],
+      "name": "Testimonial Section",
+      "settings": {
+        "heading": "What They’re Talking About Company?"
+      }
     }
   },
   "order": [
@@ -296,6 +318,7 @@
     "featured_collection",
     "logo_carousel_QKwnw6",
     "featured_blog_fYgYkC",
-    "newsletter_axYwtH"
+    "newsletter_axYwtH",
+    "testimonial_section_HC9rTB"
   ]
 }
