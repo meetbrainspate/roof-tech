@@ -296,7 +296,7 @@
         "testimonial_GNFFy9": {
           "type": "testimonial",
           "settings": {
-            "text": "test",
+            "text": "test1",
             "image": "shopify://shop_images/joining__hands_badge.png",
             "name": "Name",
             "designation": "Designation"
