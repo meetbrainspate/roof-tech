@@ -68,16 +68,6 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
-  @media screen and (min-width: 750px) {
-    .list-menu__item--link {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-    }
-    .custom-header-row{
-      padding: 8px 70px;
-    }
-  }
-
   .custom-header-row {
     width: 100%;
     padding: 8px 20px;
@@ -208,6 +198,15 @@
   }
   a.header__icon--account {
     margin-right: 24px;
+  }
+   @media screen and (min-width: 750px) {
+    .list-menu__item--link {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+    .custom-header-row{
+      padding: 8px 70px;
+    }
   }
 
 </style>
@@ -413,7 +412,7 @@
         {%- if shop.customer_accounts_enabled -%}
           <a
             href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-            class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+            class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} {% endif %}"
             rel="nofollow"
           >
             {%- if section.settings.enable_customer_avatar -%}

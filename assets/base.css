@@ -3956,4 +3956,5 @@ section.shopify-section:has(.product-section){
     font-size: 30px;
     line-height: 36px;
   }
+  .custom-header-top{display: none !important;}
 }
