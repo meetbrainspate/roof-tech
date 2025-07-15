@@ -258,6 +258,8 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
+    {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -298,11 +300,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-
-    {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
-    {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'jquery-3.6.0.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'owl.carousel.min.js' | asset_url }}" defer="defer"></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -370,6 +367,28 @@
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
+    </script>
+
+    <script src="{{ 'jquery-3.6.0.min.js' | asset_url }}"></script>
+    <script src="{{ 'owl.carousel.min.js' | asset_url }}" defer="defer"></script>
+    <script>
+      jQuery(document).ready(function () {
+        jQuery('.testimonial-carousel').owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: false,
+          dots: false,
+          items: 1
+        });
+
+        jQuery('#testimonial-prev').click(function () {
+          jQuery('.testimonial-carousel').trigger('prev.owl.carousel');
+        });
+
+        jQuery('#testimonial-next').click(function () {
+          jQuery('.testimonial-carousel').trigger('next.owl.carousel');
+        });
+      });
     </script>
 
     {%- if settings.predictive_search_enabled -%}

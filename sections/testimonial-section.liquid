@@ -1,4 +1,7 @@
 {% stylesheet %}
+.testimonial-carousel.owl-carousel{
+    width: 60%;
+}
 .testimonial-wrapper {
   display: flex;
   justify-content: space-between;
@@ -73,7 +76,18 @@
     {% for block in section.blocks %}
       <div class="testimonial-item">
         <div class="quote">❝</div>
-        <div class="stars">★★★★★</div>
+        <div class="stars">
+            {% assign rating = section.settings.star_rating %}
+            {% assign next = rating | plus: 1 %}
+            <div class="stars">
+            {% for i in (1..rating) %}
+                ★
+            {% endfor %}
+            {% for i in (next..5) %}
+                ☆
+            {% endfor %}
+            </div>
+        </div>
         <p>{{ block.settings.text }}</p>
         <div class="testimonial-meta">
           <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.name }}" style="width: 40px; height: 40px; border-radius: 50%;">
@@ -86,27 +100,6 @@
     {% endfor %}
   </div>
 </div>
-<script src="{{ 'jquery-3.6.0.min.js' | asset_url }}" defer="defer"></script>
-
-{% javascript %}
-  jQuery(document).ready(function () {
-    jQuery('.testimonial-carousel').owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: false,
-      dots: false,
-      items: 1
-    });
-
-    jQuery('#testimonial-prev').click(function () {
-      jQuery('.testimonial-carousel').trigger('prev.owl.carousel');
-    });
-
-    jQuery('#testimonial-next').click(function () {
-      jQuery('.testimonial-carousel').trigger('next.owl.carousel');
-    });
-  });
-{% endjavascript %}
 
 {% schema %}
 {
@@ -143,6 +136,15 @@
           "type": "text",
           "id": "designation",
           "label": "Designation"
+        },
+        {
+            "type": "range",
+            "id": "star_rating",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "default": 5,
+            "label": "Star Rating"
         }
       ]
     }
