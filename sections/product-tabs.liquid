@@ -1,36 +1,29 @@
-{% comment %}
-  Product Tabs Section
-{% endcomment %}
-
 <div class="tabs-container">
   <ul class="tabs">
-    <li class="tab active" data-tab="description">Description</li>
-    <li class="tab" data-tab="shipping">Shipping & Returns</li>
-    <li class="tab" data-tab="specs">Specifications</li> {# NEW TAB #}
+    {% for block in section.blocks %}
+      <li class="tab{% if forloop.first %} active{% endif %}" data-tab="tab-{{ block.id }}">
+        {{ block.settings.tab_title }}
+      </li>
+    {% endfor %}
   </ul>
 
-  <div class="tab-content active" id="description">
-    {{ product.description }}
-  </div>
-
-  <div class="tab-content" id="shipping">
-    <p>Shipping info and return policy go here.</p>
-  </div>
-
-  <div class="tab-content" id="specs">
-    <p>Here you can list technical specifications or product dimensions.</p>
-  </div>
+  {% for block in section.blocks %}
+    <div class="tab-content{% if forloop.first %} active{% endif %}" id="tab-{{ block.id }}">
+      {{ block.settings.tab_content }}
+    </div>
+  {% endfor %}
 </div>
 
 <style>
 .tabs-container {
-  background: #f7f7f7;
-  padding: 1rem;
+  background: #f9f9f9;
+  padding: 1.5rem;
 }
 .tabs {
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
   border-bottom: 2px solid #ccc;
 }
 .tab {
@@ -38,7 +31,7 @@
   padding: 0.5rem 0;
   cursor: pointer;
   font-weight: bold;
-  color: #666;
+  color: #777;
   position: relative;
 }
 .tab.active {
@@ -63,39 +56,66 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll(".tab");
-    const contents = document.querySelectorAll(".tab-content");
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
 
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        tabs.forEach((t) => t.classList.remove("active"));
-        contents.forEach((c) => c.classList.remove("active"));
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      contents.forEach((c) => c.classList.remove("active"));
 
-        tab.classList.add("active");
-        document.getElementById(tab.dataset.tab).classList.add("active");
-      });
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
     });
   });
+});
 </script>
+
 {% schema %}
 {
   "name": "Product Tabs",
-  "settings": [
+  "settings": [],
+  "blocks": [
     {
-      "type": "richtext",
-      "id": "shipping_content",
-      "label": "Shipping & Returns Content"
-    },
-    {
-      "type": "richtext",
-      "id": "specs_content",
-      "label": "Specifications Content"
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "New Tab"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content",
+          "label": "Tab Content",
+          "default": "<p>Tab content goes here.</p>"
+        }
+      ]
     }
   ],
+  "max_blocks": 6,
   "presets": [
     {
-      "name": "Product Tabs"
+      "name": "Dynamic Product Tabs",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Description",
+            "tab_content": "<p>This is the product description.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Shipping & Returns",
+            "tab_content": "<p>Shipping and return policies here.</p>"
+          }
+        }
+      ]
     }
   ]
 }
