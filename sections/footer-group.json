@@ -27,11 +27,19 @@
             "heading": "Shop",
             "menu": "shop-1"
           }
+        },
+        "footer_menu_LMwRrx": {
+          "type": "footer_menu",
+          "settings": {
+            "heading": "Legal",
+            "menu": "footer"
+          }
         }
       },
       "block_order": [
         "footer_menu_4grqf3",
-        "footer_menu_XBLm4P"
+        "footer_menu_XBLm4P",
+        "footer_menu_LMwRrx"
       ],
       "settings": {
         "color_scheme": "scheme-1",
