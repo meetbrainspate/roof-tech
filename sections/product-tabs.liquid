@@ -1,0 +1,102 @@
+{% comment %}
+  Product Tabs Section
+{% endcomment %}
+
+<div class="tabs-container">
+  <ul class="tabs">
+    <li class="tab active" data-tab="description">Description</li>
+    <li class="tab" data-tab="shipping">Shipping & Returns</li>
+    <li class="tab" data-tab="specs">Specifications</li> {# NEW TAB #}
+  </ul>
+
+  <div class="tab-content active" id="description">
+    {{ product.description }}
+  </div>
+
+  <div class="tab-content" id="shipping">
+    <p>Shipping info and return policy go here.</p>
+  </div>
+
+  <div class="tab-content" id="specs">
+    <p>Here you can list technical specifications or product dimensions.</p>
+  </div>
+</div>
+
+<style>
+.tabs-container {
+  background: #f7f7f7;
+  padding: 1rem;
+}
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  border-bottom: 2px solid #ccc;
+}
+.tab {
+  margin-right: 2rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #666;
+  position: relative;
+}
+.tab.active {
+  color: #d42b1e;
+}
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #d42b1e;
+}
+.tab-content {
+  display: none;
+  padding-top: 1rem;
+}
+.tab-content.active {
+  display: block;
+}
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active"));
+        contents.forEach((c) => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Product Tabs",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "shipping_content",
+      "label": "Shipping & Returns Content"
+    },
+    {
+      "type": "richtext",
+      "id": "specs_content",
+      "label": "Specifications Content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Tabs"
+    }
+  ]
+}
+{% endschema %}
