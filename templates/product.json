@@ -99,10 +99,19 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "product_tabs_peWhYV": {
+      "type": "product-tabs",
+      "name": "Product Tabs",
+      "settings": {
+        "shipping_content": "",
+        "specs_content": ""
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "product_tabs_peWhYV"
   ]
 }
