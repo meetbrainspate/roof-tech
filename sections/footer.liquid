@@ -49,91 +49,107 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-columns grid grid--1-col grid--2-col-tablet page-width">
+      <div class="page-width">
+        <div class="footer__content-columns grid grid--1-col grid--2-col-tablet">
         <!-- Column 1 -->
-        <div class="footer__column-one">
-          <div class="footer-block__brand-info">
-            {%- if settings.brand_image != blank -%}
-              {%- assign brand_image_height = settings.brand_image_width | divided_by: settings.brand_image.aspect_ratio -%}
-              <div class="footer-block__image-wrapper" style="max-width: min(100%, {{ settings.brand_image_width }}px);">
-                {{
-                  settings.brand_image
-                  | image_url: width: 1100
-                  | image_tag:
-                    loading: 'lazy',
-                    widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
-                    height: brand_image_height,
-                    width: settings.brand_image_width
-                }}
+          <div class="footer__column-one">
+            <div class="footer-block__brand-info">
+              {%- if settings.brand_image != blank -%}
+                {%- assign brand_image_height = settings.brand_image_width | divided_by: settings.brand_image.aspect_ratio -%}
+                <div class="footer-block__image-wrapper" style="max-width: min(100%, {{ settings.brand_image_width }}px);">
+                  {{
+                    settings.brand_image
+                    | image_url: width: 1100
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                      height: brand_image_height,
+                      width: settings.brand_image_width
+                  }}
+                </div>
+              {%- endif -%}
+
+              {%- if settings.brand_description != blank -%}
+                <div class="rte footer__brand-description">{{ settings.brand_description }}</div>
+              {%- endif -%}
+
+              {%- if section.settings.show_social and has_social_icons -%}
+                <div class="footer__social-icons">
+                  {%- render 'social-icons', class: 'footer__list-social' -%}
+                </div>
+              {%- endif -%}
+
+              <div class="footer__address center">
+                <img src="{{ 'location-icon.svg' | asset_url }}" />
+                <p>U.S. Headquarters Roof Tech, Inc. 10620 <br/> Treena St. Suite 230 San Diego, CA 92131</p>
               </div>
-            {%- endif -%}
-
-            {%- if settings.brand_description != blank -%}
-              <div class="rte footer__brand-description">{{ settings.brand_description }}</div>
-            {%- endif -%}
-
-            {%- if section.settings.show_social and has_social_icons -%}
-              <div class="footer__social-icons">
-                {%- render 'social-icons', class: 'footer__list-social' -%}
-              </div>
-            {%- endif -%}
-
-            <div class="footer__address center">
-              <img src="{{ 'location-icon.svg' | asset_url }}" />
-              <p>U.S. Headquarters Roof Tech, Inc. 10620 <br/> Treena St. Suite 230 San Diego, CA 92131</p>
             </div>
           </div>
-        </div>
 
-        <!-- Column 2 -->
-        <div class="footer__column-two">
-          <div>
-             <img src="{{ 'footer-animation.png' | asset_url }}" />
-          </div>
-          <div class="grid grid--1-col grid--3-col-tablet">
-            {% for block in section.blocks %}
-            {% if block.type == 'footer_menu' %}
-              <div class="footer-block footer-block--menu" {{ block.shopify_attributes }}>
-                {% if block.settings.heading != blank %}
-                  <h2 class="footer-block__heading inline-richtext">{{ block.settings.heading }}</h2>
-                {% endif %}
+          <!-- Column 2 -->
+          <div class="footer__column-two">
+            <div>
+              <img src="{{ 'footer-animation.png' | asset_url }}" />
+            </div>
+            <div class="grid grid--1-col grid--3-col-tablet">
+              {% for block in section.blocks %}
+              {% if block.type == 'footer_menu' %}
+                <div class="footer-block footer-block--menu" {{ block.shopify_attributes }}>
+                  {% if block.settings.heading != blank %}
+                    <h2 class="footer-block__heading inline-richtext">{{ block.settings.heading }}</h2>
+                  {% endif %}
+                  <div class="zig-zag-line"> </div>
+                  {% if block.settings.menu != blank %}
+                    <ul class="footer-block__details-content list-unstyled">
+                      {% for link in block.settings.menu.links %}
+                        <li>
+                          <a
+                            href="{{ link.url }}"
+                            class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                          >
+                            {{ link.title | escape }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
 
-                {% if block.settings.menu != blank %}
-                  <ul class="footer-block__details-content list-unstyled">
-                    {% for link in block.settings.menu.links %}
+                </div>
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="call-info-box">
+                <div>
+                    <img src="{{ 'call-icon.svg' | asset_url }}" />
+                    <a href="callto:8589356064">(858) 935-6064</a>
+                </div>
+                <div>
+                    <img src="{{ 'email-icon.svg' | asset_url }}" />
+                    <span>
+                      <a href="mailto:sales@roof-tech.us">sales@roof-tech.us</a>
+                      <a href="mailto:info@roof-tech.us">info@roof-tech.us</a>
+                    </span>
+                </div>
+            </div>
+            <div class="footer__copyright caption">
+              <small class="copyright__content"
+                >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+              </small>
+              <small class="copyright__content bold">{{ powered_by_link }}</small>
+              {%- if section.settings.show_policy -%}
+                {% comment %} <ul class="policies list-unstyled">
+                  {%- for policy in shop.policies -%}
+                    {%- if policy != blank -%}
                       <li>
-                        <a
-                          href="{{ link.url }}"
-                          class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                        <small class="copyright__content"
+                          ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
                         >
-                          {{ link.title | escape }}
-                        </a>
                       </li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-              </div>
-            {% endif %}
-          {% endfor %}
-          </div>
-          <div class="footer__copyright caption">
-            <small class="copyright__content"
-              >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
-            </small>
-            <small class="copyright__content">{{ powered_by_link }}</small>
-            {%- if section.settings.show_policy -%}
-              {% comment %} <ul class="policies list-unstyled">
-                {%- for policy in shop.policies -%}
-                  {%- if policy != blank -%}
-                    <li>
-                      <small class="copyright__content"
-                        ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
-                      >
-                    </li>
-                  {%- endif -%}
-                {%- endfor -%}
-              </ul> {% endcomment %}
-            {%- endif -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul> {% endcomment %}
+              {%- endif -%}
+            </div>
           </div>
         </div>
       </div>

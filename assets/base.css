@@ -4184,6 +4184,92 @@ div#counter-stats {
 .footer__column-two .grid.grid--1-col.grid--3-col-tablet {
     margin-top: 40px;
 }
+.footer__column-two .footer-block li a:hover ,.footer__column-two .footer-block li a.list-menu__item--active{
+  color: #D52722;
+  text-decoration: none;
+}
+.zig-zag-line {
+  --a: 90deg; /* control the angle */
+  --s: 14px; /* size of the zig-zag */
+  --b: 3px;  /* control the thickness */
+  
+  background: #D52722;
+  height: calc(var(--b) + var(--s)/(2*tan(var(--a)/2)));
+  width: 70px;
+  --_g:var(--s) repeat-x conic-gradient(from calc(var(--a)/-2) at bottom,
+    #0000,#000 1deg calc(var(--a) - 1deg),#0000 var(--a));
+  mask: 50% calc(-1*var(--b))/var(--_g) exclude,50%/var(--_g);
+}
+.footer__column-two .footer-block ul {
+    margin-top: 20px;
+}
+.call-info-box {
+  display: flex;
+  padding: 30px;
+  background-color: #1D1D1D;
+}
+.call-info-box > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 50%;
+}
+.call-info-box > div a {
+    color: #A1A1A1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+}
+.call-info-box > div:last-child{
+  border-left: 1px solid #303030;
+  padding-left: 25px;
+}
+.call-info-box > div a:hover,.footer__copyright.caption small a:hover{
+  color: #D52722;
+  text-decoration: none;
+}
+.footer__copyright.caption {
+    margin-top: 40px;
+}
+.footer__copyright.caption small{
+    color: #6C6C6C;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+.footer__copyright.caption small.bold{
+  color: #A1A1A1;
+} 
+.footer::after {
+    content: "";
+    background-color: #1A1A1A;
+    width: 70%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.footer__column-two > div:first-child {
+    width: 100%;
+    overflow: hidden;
+}
+@keyframes marquee {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(-100%);
+}
+}
+.footer__column-two > div > img {
+    animation: marquee 40s infinite linear;
+    will-change: transform;
+}
+
+
+
+
 
 @media screen and (max-width: 1400px){
   .custom-header-row.custom-header-bottom{
@@ -4228,6 +4314,18 @@ div#counter-stats {
     padding: 40px 30px !important;
   }
   .newsletter_section{gap: 30px;}
+  .footer::after{
+    display: none;
+  }
+  .footer__content-columns .footer__column-one{
+    width: auto;
+    background: none;
+    padding: 0;
+  }
+  .footer__address p br, .footer::before{
+    display: none;
+  }
+  
 }
 @media screen and (max-width: 990px) {
   .product-section slider-component ul{
