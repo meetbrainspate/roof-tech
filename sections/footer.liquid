@@ -49,7 +49,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-columns grid grid--1-col grid--2-col-tablet">
+      <div class="footer__content-columns grid grid--1-col grid--2-col-tablet page-width">
         <!-- Column 1 -->
         <div class="footer__column-one">
           <div class="footer-block__brand-info">
@@ -78,15 +78,20 @@
               </div>
             {%- endif -%}
 
-            <div class="footer__address">
-              <p>U.S. Headquarters Roof Tech, Inc. 10620 Treena St. Suite 230 San Diego, CA 92131</p>
+            <div class="footer__address center">
+              <img src="{{ 'location-icon.svg' | asset_url }}" />
+              <p>U.S. Headquarters Roof Tech, Inc. 10620 <br/> Treena St. Suite 230 San Diego, CA 92131</p>
             </div>
           </div>
         </div>
 
         <!-- Column 2 -->
-        <div class="footer__column-two grid grid--1-col grid--3-col-tablet">
-          {% for block in section.blocks %}
+        <div class="footer__column-two">
+          <div>
+             <img src="{{ 'footer-animation.png' | asset_url }}" />
+          </div>
+          <div class="grid grid--1-col grid--3-col-tablet">
+            {% for block in section.blocks %}
             {% if block.type == 'footer_menu' %}
               <div class="footer-block footer-block--menu" {{ block.shopify_attributes }}>
                 {% if block.settings.heading != blank %}
@@ -110,12 +115,32 @@
               </div>
             {% endif %}
           {% endfor %}
+          </div>
+          <div class="footer__copyright caption">
+            <small class="copyright__content"
+              >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+            </small>
+            <small class="copyright__content">{{ powered_by_link }}</small>
+            {%- if section.settings.show_policy -%}
+              {% comment %} <ul class="policies list-unstyled">
+                {%- for policy in shop.policies -%}
+                  {%- if policy != blank -%}
+                    <li>
+                      <small class="copyright__content"
+                        ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
+                      >
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul> {% endcomment %}
+            {%- endif -%}
+          </div>
         </div>
       </div>
     {%- endunless -%}
   {%- endif -%}
 
-  <div
+  {% comment %} <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
@@ -149,7 +174,7 @@
       </div>
       <div class="footer__column footer__column--info">
         {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
+          {% comment %} <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
             <ul class="list list-payment" role="list">
               {%- for type in shop.enabled_payment_types -%}
@@ -158,7 +183,7 @@
                 </li>
               {%- endfor -%}
             </ul>
-          </div>
+          </div> {% endcomment %}
         {%- endif -%}
       </div>
     </div>
@@ -169,7 +194,7 @@
         </small>
         <small class="copyright__content">{{ powered_by_link }}</small>
         {%- if section.settings.show_policy -%}
-          <ul class="policies list-unstyled">
+          {% comment %} <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
                 <li>
@@ -179,11 +204,11 @@
                 </li>
               {%- endif -%}
             {%- endfor -%}
-          </ul>
+          </ul> {% endcomment %}
         {%- endif -%}
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
 </footer>
 
 {% schema %}

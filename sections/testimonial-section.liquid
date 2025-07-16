@@ -5,18 +5,18 @@
 .testimonial-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  padding: 70px 0;
 }
 
 .testimonial-left {
   flex: 1;
+  max-width: 30rem;
 }
 
 .testimonial-left h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -27,78 +27,92 @@
 
 .testimonial-left .nav-buttons button {
   background: none;
-  border: 1px solid red;
-  color: red;
-  padding: 8px 14px;
+  border: 1px solid #D52722;
+  padding: 18px;
   margin-right: 10px;
   cursor: pointer;
+  background-color: #ffffff;
+  transition: 0.3s all;
+}
+.testimonial-left .nav-buttons button img{
+  filter: brightness(0) saturate(100%) invert(38%) sepia(20%) saturate(4243%) hue-rotate(332deg) brightness(79%) contrast(119%);
+}
+.testimonial-left .nav-buttons button#testimonial-prev img{
+transform: rotate(180deg);
+}
+.testimonial-left .nav-buttons button:hover{
+  background-color: #D52722;
+}
+.testimonial-left .nav-buttons button:hover img{
+  filter: brightness(0) invert(1);
 }
 
 .testimonial-carousel {
   flex: 2;
 }
 
-.testimonial-item {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  margin: 10px;
-}
-
 .testimonial-item .quote {
   font-size: 22px;
   color: #f33;
 }
-
-.testimonial-item .stars {
-  color: orange;
-  margin-bottom: 10px;
-}
-
 .testimonial-meta {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 {% endstylesheet %}
 
-<div class="testimonial-wrapper">
-  <div class="testimonial-left">
-    <h2>{{ section.settings.heading }}</h2>
-    <div class="nav-buttons">
-      <button id="testimonial-prev">←</button>
-      <button id="testimonial-next">→</button>
+<div class="testimonial-section">
+  <div class="page-width">
+  <div class="testimonial-wrapper">
+    <div class="testimonial-left">
+      <h2>{{ section.settings.heading }}</h2>
+      <div class="nav-buttons">
+        <button id="testimonial-prev">
+          <img src="{{ 'right-arrow-white-icon.svg' | asset_url }}" />
+        </button>
+        <button id="testimonial-next">
+          <img src="{{ 'right-arrow-white-icon.svg' | asset_url }}" />
+        </button>
+      </div>
     </div>
-  </div>
 
-  <div class="testimonial-carousel owl-carousel">
-    {% for block in section.blocks %}
-      <div class="testimonial-item">
-        <div class="quote">❝</div>
-        <div class="stars">
-            {% assign rating = section.settings.star_rating %}
-            {% assign next = rating | plus: 1 %}
-            <div class="stars">
-            {% for i in (1..rating) %}
-                ★
-            {% endfor %}
-            {% for i in (next..5) %}
-                ☆
-            {% endfor %}
+    <div class="testimonial-carousel owl-carousel">
+      {% for block in section.blocks %}
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <div class="quote-stars">
+              <div class="quote">
+                <img src="{{ 'icon-quote.svg' | asset_url }}" />
+              </div>
+              <div class="stars">
+                {% assign rating = section.settings.star_rating %}
+                {% assign next = rating | plus: 1 %}
+                <div class="stars">
+                {% for i in (1..rating) %}
+                  ★
+                {% endfor %}
+                {% for i in (next..5) %}
+                  ★
+                {% endfor %}
+                </div>
+              </div>
             </div>
-        </div>
-        <p>{{ block.settings.text }}</p>
-        <div class="testimonial-meta">
-          <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.name }}" style="width: 40px; height: 40px; border-radius: 50%;">
-          <div>
-            <strong>{{ block.settings.name }}</strong><br>
-            <small>{{ block.settings.designation }}</small>
+            <p>{{ block.settings.text }}</p>
+          </div>
+          <div class="testimonial-meta">
+            <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.name }}">
+            <div>
+              <strong>{{ block.settings.name }}</strong>
+              <small>{{ block.settings.designation }}</small>
+            </div>
           </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
+</div>
 </div>
 
 {% schema %}
