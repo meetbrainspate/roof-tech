@@ -144,27 +144,27 @@
                   <div class="social-icons">
                     {% if block.settings.social_link_1 != blank %}
                       <a href="{{ block.settings.social_link_1 }}" target="_blank" class="social-icon-item">
-                        {{ block.settings.social_label_1 }}
+                        {{ 'facebook.svg' | asset_url | image_tag }}
                       </a>
                     {% endif %}
                     {% if block.settings.social_link_2 != blank %}
                       <a href="{{ block.settings.social_link_2 }}" target="_blank" class="social-icon-item">
-                        {{ block.settings.social_label_2 }}
+                        {{ 'x.svg' | asset_url | image_tag }}
                       </a>
                     {% endif %}
                     {% if block.settings.social_link_3 != blank %}
                       <a href="{{ block.settings.social_link_3 }}" target="_blank" class="social-icon-item">
-                        {{ block.settings.social_label_3 }}
+                        {{ 'instagram.svg' | asset_url | image_tag }}
                       </a>
                     {% endif %}
                     {% if block.settings.social_link_4 != blank %}
                       <a href="{{ block.settings.social_link_4 }}" target="_blank" class="social-icon-item">
-                        {{ block.settings.social_label_4 }}
+                        {{ 'linkedin.svg' | asset_url | image_tag }}
                       </a>
                     {% endif %}
                     {% if block.settings.social_link_5 != blank %}
                       <a href="{{ block.settings.social_link_5 }}" target="_blank" class="social-icon-item">
-                        {{ block.settings.social_label_5 }}
+                        {{ 'mail.svg' | asset_url | image_tag }}
                       </a>
                     {% endif %}
                   </div>
@@ -484,21 +484,9 @@
           "content": "Social Links"
         },
         {
-          "type": "text",
-          "id": "social_label_1",
-          "label": "Social Label 1",
-          "default": "Facebook"
-        },
-        {
           "type": "url",
           "id": "social_link_1",
           "label": "Social Link 1"
-        },
-        {
-          "type": "text",
-          "id": "social_label_2",
-          "label": "Social Label 2",
-          "default": "Twitter"
         },
         {
           "type": "url",
@@ -506,32 +494,14 @@
           "label": "Social Link 2"
         },
         {
-          "type": "text",
-          "id": "social_label_3",
-          "label": "Social Label 3",
-          "default": "Instagram"
-        },
-        {
           "type": "url",
           "id": "social_link_3",
           "label": "Social Link 3"
         },
         {
-          "type": "text",
-          "id": "social_label_4",
-          "label": "Social Label 4",
-          "default": "LinkedIn"
-        },
-        {
           "type": "url",
           "id": "social_link_4",
           "label": "Social Link 4"
-        },
-        {
-          "type": "text",
-          "id": "social_label_5",
-          "label": "Social Label 5",
-          "default": "YouTube"
         },
         {
           "type": "url",
