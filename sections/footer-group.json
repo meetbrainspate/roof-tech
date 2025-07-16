@@ -34,12 +34,19 @@
             "heading": "Legal",
             "menu": "footer"
           }
+        },
+        "brand_information_YAc3x6": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
         }
       },
       "block_order": [
         "footer_menu_bh63z3",
         "footer_menu_FDJYNK",
-        "footer_menu_gYmRLM"
+        "footer_menu_gYmRLM",
+        "brand_information_YAc3x6"
       ],
       "settings": {
         "color_scheme": "scheme-1",
