@@ -312,8 +312,9 @@
         },
         "paragraph_ViefXz": {
           "type": "paragraph",
+          "disabled": true,
           "settings": {
-            "text": ""
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
           }
         },
         "email_form_DFaWbT": {
