@@ -20,10 +20,18 @@
             "heading": "Quick Links",
             "menu": "quick-link"
           }
+        },
+        "footer_menu_FDJYNK": {
+          "type": "footer_menu",
+          "settings": {
+            "heading": "Shop",
+            "menu": "shop-1"
+          }
         }
       },
       "block_order": [
-        "footer_menu_bh63z3"
+        "footer_menu_bh63z3",
+        "footer_menu_FDJYNK"
       ],
       "settings": {
         "color_scheme": "scheme-1",
