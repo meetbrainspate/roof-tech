@@ -296,16 +296,38 @@
         "testimonial_8zhf8V": {
           "type": "testimonial",
           "settings": {
-            "text": "wewqewqewqsda",
+            "text": "“RT-MINI saves us nearly two hours on the roof. Once we assemble the mounting systems and get them up to the roof, there’s no need to drill holes or look for studs, and we can make adjustments easily even when the rails aren’t straight.”",
             "image": "shopify://shop_images/canada_flag_4b9a2615-0277-42c3-b74d-03ba31befdc3.png",
-            "name": "dasdsad",
-            "designation": "sdasdasda",
+            "name": "Smart Energy Today",
+            "designation": "Ceo",
+            "star_rating": 5
+          }
+        },
+        "testimonial_qbxX6A": {
+          "type": "testimonial",
+          "settings": {
+            "text": "“From the first trial installation on our own headquarters in 2018, we knew RT-MINI was the right product for us. Now we use it on nearly all our shingled roofs for residential jobs, with nearly 2,000 projects completed and many more to come.”",
+            "image": "shopify://shop_images/canada_flag_4b9a2615-0277-42c3-b74d-03ba31befdc3.png",
+            "name": "May Electric",
+            "designation": "CTO",
+            "star_rating": 5
+          }
+        },
+        "testimonial_TqjmN6": {
+          "type": "testimonial",
+          "settings": {
+            "text": "“Roof Tech’s mounting systems protect the integrity of the shingles, so there are never any leaks. Now I insist that our installers use Roof Tech products for all our jobs.”",
+            "image": "shopify://shop_images/canada_flag_4b9a2615-0277-42c3-b74d-03ba31befdc3.png",
+            "name": "Marcor Roofing",
+            "designation": "Founder",
             "star_rating": 5
           }
         }
       },
       "block_order": [
-        "testimonial_8zhf8V"
+        "testimonial_8zhf8V",
+        "testimonial_qbxX6A",
+        "testimonial_TqjmN6"
       ],
       "name": "Testimonial Section",
       "settings": {
