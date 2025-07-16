@@ -446,6 +446,15 @@
         {%- endfor -%}
 
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+          <style>
+              .total-container {
+                display: grid; 
+                place-items: center;
+              }
+            </style>
+            <div class="total-container" id="cart-total">
+              <span class="centered-text">{{ cart.total_price | money }}</span>
+            </div>
           {% if cart == empty %}
             <span class="svg-wrapper">{{ 'cart-icon.svg' | inline_asset_content }}</span>
           {% else %}
@@ -594,6 +603,66 @@
 
   customElements.define('sticky-header', StickyHeader);
 {% endjavascript %}
+
+<script>
+  function formatMoney(cents, currency = 'USD') {
+    const price = (cents / 100).toFixed(2);
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: currency
+    }).format(price);
+  }
+
+  function updateCartTotal() {
+    fetch('/cart.js')
+      .then(res => res.json())
+      .then(cart => {
+        const el = document.getElementById('cart-total');
+        if (el) {
+          el.innerHTML = `<span class="centered-text">${formatMoney(cart.total_price, cart.currency || 'USD')}</span>`;
+        }
+
+        // Optional: update cart count
+        const countEl = document.querySelector('[data-cart-count]');
+        if (countEl) countEl.textContent = cart.item_count;
+      })
+      .catch(error => console.error('Failed to update cart total:', error));
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Attach AJAX handler to all add-to-cart forms
+    document.querySelectorAll('form[data-type="add-to-cart-form"]').forEach(function(form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const spinner = form.querySelector('.loading__spinner');
+        if (spinner) spinner.classList.remove('hidden');
+
+        fetch('/cart/add.js', {
+          method: 'POST',
+          body: formData
+        })
+        .then(res => {
+          if (!res.ok) throw new Error('Add to cart failed');
+          return res.json();
+        })
+        .then(data => {
+          updateCartTotal();
+          // Optionally: show success or toast
+        })
+        .catch(err => {
+          console.error('Error adding to cart:', err);
+        })
+        .finally(() => {
+          if (spinner) spinner.classList.add('hidden');
+        });
+      });
+    });
+  });
+</script>
+
+
 
 <script type="application/ld+json">
   {
