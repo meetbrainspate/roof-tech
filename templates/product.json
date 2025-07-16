@@ -72,7 +72,7 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -81,6 +81,31 @@
         "padding_top": 36,
         "padding_bottom": 12
       }
+    },
+    "product_tabs_peWhYV": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_wHnkCh": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Description",
+            "tab_content": "{{ product.description }}"
+          }
+        },
+        "tab_KUcMKy": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Shipping & Return",
+            "tab_content": "<p>Tab content goes here.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_wHnkCh",
+        "tab_KUcMKy"
+      ],
+      "name": "Product Tabs",
+      "settings": {}
     },
     "related-products": {
       "type": "related-products",
@@ -103,6 +128,7 @@
   },
   "order": [
     "main",
+    "product_tabs_peWhYV",
     "related-products"
   ]
 }

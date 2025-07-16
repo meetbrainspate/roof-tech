@@ -1,0 +1,122 @@
+<div class="tabs-container">
+  <ul class="tabs">
+    {% for block in section.blocks %}
+      <li class="tab{% if forloop.first %} active{% endif %}" data-tab="tab-{{ block.id }}">
+        {{ block.settings.tab_title }}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% for block in section.blocks %}
+    <div class="tab-content{% if forloop.first %} active{% endif %}" id="tab-{{ block.id }}">
+      {{ block.settings.tab_content }}
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+.tabs-container {
+  background: #f9f9f9;
+  padding: 1.5rem;
+}
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #ccc;
+}
+.tab {
+  margin-right: 2rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #777;
+  position: relative;
+}
+.tab.active {
+  color: #d42b1e;
+}
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #d42b1e;
+}
+.tab-content {
+  display: none;
+  padding-top: 1rem;
+}
+.tab-content.active {
+  display: block;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      contents.forEach((c) => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Product Tabs",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "New Tab"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content",
+          "label": "Tab Content",
+          "default": "<p>Tab content goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Dynamic Product Tabs",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Description",
+            "tab_content": "<p>This is the product description.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Shipping & Returns",
+            "tab_content": "<p>Shipping and return policies here.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
