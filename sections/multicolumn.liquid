@@ -142,18 +142,31 @@
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
                   <div class="social-icons">
-                    {% for i in (1..5) %}
-                      {% assign label_key = "social_label_" | append: i %}
-                      {% assign link_key = "social_link_" | append: i %}
-                      {% assign label = block.settings | lookup: label_key %}
-                      {% assign link = block.settings | lookup: link_key %}
-
-                      {% if link != blank %}
-                        <a href="{{ link }}" target="_blank" class="social-icon-item">
-                          {{ label }}
-                        </a>
-                      {% endif %}
-                    {% endfor %}
+                    {% if block.settings.social_link_1 != blank %}
+                      <a href="{{ block.settings.social_link_1 }}" target="_blank" class="social-icon-item">
+                        {{ block.settings.social_label_1 }}
+                      </a>
+                    {% endif %}
+                    {% if block.settings.social_link_2 != blank %}
+                      <a href="{{ block.settings.social_link_2 }}" target="_blank" class="social-icon-item">
+                        {{ block.settings.social_label_2 }}
+                      </a>
+                    {% endif %}
+                    {% if block.settings.social_link_3 != blank %}
+                      <a href="{{ block.settings.social_link_3 }}" target="_blank" class="social-icon-item">
+                        {{ block.settings.social_label_3 }}
+                      </a>
+                    {% endif %}
+                    {% if block.settings.social_link_4 != blank %}
+                      <a href="{{ block.settings.social_link_4 }}" target="_blank" class="social-icon-item">
+                        {{ block.settings.social_label_4 }}
+                      </a>
+                    {% endif %}
+                    {% if block.settings.social_link_5 != blank %}
+                      <a href="{{ block.settings.social_link_5 }}" target="_blank" class="social-icon-item">
+                        {{ block.settings.social_label_5 }}
+                      </a>
+                    {% endif %}
                   </div>
                 {%- endif -%}
                 {%- if block.settings.text != blank and block.settings.link_label == blank -%}
