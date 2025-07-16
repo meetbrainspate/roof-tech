@@ -68,16 +68,9 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
-  @media screen and (min-width: 750px) {
-    .list-menu__item--link {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-    }
-  }
-
   .custom-header-row {
     width: 100%;
-    padding: 8px 70px;
+    padding: 8px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,10 +123,7 @@
     justify-content: center;
   }
 
-  .custom-header-bottom a {
-    margin: 0 15px;
-    text-decoration: none;
-  }
+  
   .custom-header-social {
     line-height: 1;
   } 
@@ -195,6 +185,28 @@
   }
   .slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {
     display: none;
+  }
+  .slideshow__text .banner__text.rte.desc p {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: unset;
+  }
+  .banner__text.rte.desc {
+    border-left: 5px solid #D52722;
+    padding-left: 20px;
+  }
+  a.header__icon--account {
+    margin-right: 24px;
+  }
+   @media screen and (min-width: 750px) {
+    .list-menu__item--link {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+    .custom-header-row{
+      padding: 8px 70px;
+    }
   }
 
 </style>
@@ -368,6 +380,8 @@
         {%- endif -%}
       {%- endif -%}
 
+      {% render 'header-search', input_id: 'Search-In-Modal' %} 
+
       <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
         <div class="desktop-localization-wrapper">
           {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -392,12 +406,13 @@
             </localization-form>
           {%- endif -%}
         </div>
-        {% render 'header-search', input_id: 'Search-In-Modal' %}
+        
+        {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
 
         {%- if shop.customer_accounts_enabled -%}
           <a
             href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-            class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+            class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} {% endif %}"
             rel="nofollow"
           >
             {%- if section.settings.enable_customer_avatar -%}

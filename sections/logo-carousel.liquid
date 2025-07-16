@@ -1,7 +1,7 @@
 <section class="logo-carousel-section">
     {% if section.settings.title != blank %}
     <div class="logo-carousel-heading">
-      <h2>{{ section.settings.title }}</h2>
+      <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
     </div>
     {% endif %}
   <div class="owl-carousel owl-carousel-row owl-carousel-top">
@@ -73,12 +73,7 @@
 }
 .logo-carousel-heading {
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-.logo-carousel-heading h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  margin-bottom: 4.5rem;
 }
 .logo-item {
   text-align: center;
@@ -92,6 +87,25 @@
   display: flex;
   align-items: center;
 }
+.logo-item {
+    border: 1px solid #EAEAEA;
+    width: 200px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+}
+.logo-item img {
+    max-height: 78px;
+    object-fit: contain;
+}
+@media screen and (min-width: 1600px){
+  .logo-item {
+    width: 250px;
+    height: 110px;
+}
+}
 </style>
 
 <script>
@@ -100,16 +114,18 @@
       loop: true,
       margin: 20,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 5000,
       autoplayHoverPause: true,
-      autoplaySpeed: 3000,
-      smartSpeed: 3000,
+      autoplaySpeed: 5000,
+      smartSpeed: 5000,
       slideTransition: 'linear',
       rtl: false,
       responsive: {
         0: { items: 2 },
         600: { items: 4 },
-        1000: { items: 6 }
+        1000: { items: 5 },
+        1300: { items: 6 },
+        1600: { items: 7 }
       }
     });
 
@@ -117,16 +133,18 @@
       loop: true,
       margin: 20,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 5000,
       autoplayHoverPause: true,
-      autoplaySpeed: 3000,
-      smartSpeed: 3000,
+      autoplaySpeed: 5000,
+      smartSpeed: 5000,
       slideTransition: 'linear',
       rtl: true, /* Reverse direction */
       responsive: {
         0: { items: 2 },
         600: { items: 4 },
-        1000: { items: 6 }
+        1000: { items: 5 },
+        1300: { items: 6 },
+        1600: { items: 7 }
       }
     });
   });
