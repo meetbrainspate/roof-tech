@@ -1,0 +1,206 @@
+{% stylesheet %}
+<style>
+  .sales-map-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .sales-map-image {
+    width: 100%;
+    display: block;
+  }
+
+  .map-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: 2px solid #fff;
+    z-index: 10;
+  }
+
+  .popup {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 99;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    width: 260px;
+  }
+
+  .popup.active {
+    display: block;
+  }
+
+  .popup .person {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .popup .person img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .popup .person .info {
+    flex: 1;
+  }
+
+  .popup .person .info .name {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .popup .person .info .desc {
+    font-size: 13px;
+    color: #555;
+  }
+</style>
+{% endstylesheet %}
+
+<div class="sales-map-wrapper" id="sales-map-wrapper">
+  {% if section.settings.map_image %}
+    <img src="{{ section.settings.map_image | img_url: 'master' }}" class="sales-map-image" alt="Sales Map" />
+  {% endif %}
+
+  {%- assign region_blocks = section.blocks | where: "type", "region" -%}
+  {%- assign salesperson_blocks = section.blocks | where: "type", "salesperson" -%}
+
+  {% for region in region_blocks %}
+    <div
+      class="map-dot"
+      style="top: {{ region.settings.y_pos }}%; left: {{ region.settings.x_pos }}%;"
+      data-region="{{ region.settings.region_id }}">
+    </div>
+
+    <div class="popup" id="popup-{{ region.settings.region_id }}">
+      <strong>{{ region.settings.region_name }}</strong>
+      <div class="sales-list">
+        {% assign region_salespeople = salesperson_blocks | where: "settings.region_id", region.settings.region_id %}
+        {% for person in region_salespeople %}
+          <div class="person">
+            {% if person.settings.image != blank %}
+              <img src="{{ person.settings.image | img_url: '100x100' }}" alt="{{ person.settings.name }}" />
+            {% endif %}
+            <div class="info">
+              <div class="name">{{ person.settings.name }}</div>
+              <div class="desc">{{ person.settings.description }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.getElementById('sales-map-wrapper');
+
+    wrapper.querySelectorAll('.map-dot').forEach(dot => {
+      dot.addEventListener('click', function (e) {
+        const regionId = dot.dataset.region;
+
+        wrapper.querySelectorAll('.popup').forEach(p => p.classList.remove('active'));
+
+        const popup = document.getElementById('popup-' + regionId);
+        if (popup) {
+          popup.classList.add('active');
+          popup.style.left = dot.style.left;
+          popup.style.top = `calc(${dot.style.top} + 20px)`;
+        }
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.map-dot') && !e.target.closest('.popup')) {
+        wrapper.querySelectorAll('.popup').forEach(p => p.classList.remove('active'));
+      }
+    });
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Sales Map",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Map Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "region",
+      "name": "Region",
+      "settings": [
+        {
+          "type": "text",
+          "id": "region_id",
+          "label": "Region ID"
+        },
+        {
+          "type": "text",
+          "id": "region_name",
+          "label": "Region Name"
+        },
+        {
+          "type": "number",
+          "id": "x_pos",
+          "label": "X Position (%)",
+          "default": 50
+        },
+        {
+          "type": "number",
+          "id": "y_pos",
+          "label": "Y Position (%)",
+          "default": 50
+        }
+      ]
+    },
+    {
+      "type": "salesperson",
+      "name": "Salesperson",
+      "settings": [
+        {
+          "type": "text",
+          "id": "region_id",
+          "label": "Region ID"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sales Map"
+    }
+  ]
+}
+{% endschema %}
