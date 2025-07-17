@@ -22,10 +22,11 @@
         "column_kkMkrA": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/brendan_o_loole_north.png",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
+            "link_label": "Read More",
+            "link": "#read-more",
             "social_link_1": "shopify://collections",
             "social_link_2": "",
             "social_link_3": "",
@@ -38,8 +39,8 @@
           "settings": {
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
+            "link_label": "read",
+            "link": "#read-more",
             "social_link_1": "",
             "social_link_2": "",
             "social_link_3": "",
