@@ -60,39 +60,51 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const wrapper = document.getElementById('sales-map-wrapper');
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
 
-    // Attach click event to each dot
+    function showPopup(dot) {
+      const blockId = dot.dataset.blockId;
+      const popup = document.getElementById('popup-' + blockId);
+
+      wrapper.querySelectorAll('.popup').forEach((p) => p.classList.remove('active'));
+
+      if (popup) {
+        popup.classList.add('active');
+        popup.style.position = 'absolute';
+        popup.style.left = `${dot.offsetLeft}px`;
+        popup.style.top = `${dot.offsetTop + 20}px`;
+      }
+    }
+
+    function hideAllPopups() {
+      wrapper.querySelectorAll('.popup').forEach((p) => p.classList.remove('active'));
+    }
+
     wrapper.querySelectorAll('.map-dot').forEach((dot) => {
-      dot.addEventListener('click', function () {
-        const blockId = dot.dataset.blockId;
-
-        // Hide all popups
-        wrapper.querySelectorAll('.popup').forEach((p) => p.classList.remove('active'));
-
-        // Show the correct popup
-        const popup = document.getElementById('popup-' + blockId);
-        if (popup) {
-          popup.classList.add('active');
-
-          // Position the popup near the dot
-          const dotRect = dot.getBoundingClientRect();
-          const wrapperRect = wrapper.getBoundingClientRect();
-          
-          popup.style.position = 'absolute';
-          popup.style.left = `${dot.offsetLeft}px`;
-          popup.style.top = `${dot.offsetTop + 20}px`;
-        }
-      });
-    });
-
-    // Close popup on click outside
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.map-dot') && !e.target.closest('.popup')) {
-        wrapper.querySelectorAll('.popup').forEach((p) => p.classList.remove('active'));
+      if (isTouchDevice) {
+        // Mobile behavior: Click
+        dot.addEventListener('click', function (e) {
+          e.stopPropagation();
+          showPopup(dot);
+        });
+      } else {
+        // Desktop behavior: Hover
+        dot.addEventListener('mouseenter', () => showPopup(dot));
+        dot.addEventListener('mouseleave', () => hideAllPopups());
       }
     });
+
+    if (isTouchDevice) {
+      // Close popup on outside click (mobile only)
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.map-dot') && !e.target.closest('.popup')) {
+          hideAllPopups();
+        }
+      });
+    }
   });
 </script>
+
 
 
 
