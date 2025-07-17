@@ -16,6 +16,35 @@
         "padding_bottom": 28
       }
     },
+    "image_banner_BR3iHQ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_3mRbtB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet the Roof Tech Team",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3mRbtB"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/subpage-banner.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "multicolumn_Q6Y7nc": {
       "type": "multicolumn",
       "blocks": {
@@ -124,6 +153,7 @@
   },
   "order": [
     "main",
+    "image_banner_BR3iHQ",
     "multicolumn_Q6Y7nc",
     "sales_map_Rake8t"
   ]
