@@ -75,6 +75,7 @@
         },
         "button_nGrJWe": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
