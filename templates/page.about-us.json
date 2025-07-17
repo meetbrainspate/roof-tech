@@ -16,24 +16,66 @@
         "padding_bottom": 28
       }
     },
+    "image_banner_rP6nzc": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_mg8ddM": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mg8ddM"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/subpage-banner.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "top-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
     "rich_text_7HD6cw": {
       "type": "rich-text",
       "blocks": {
         "heading_EzDeE4": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "Roof Tech Inc. : The Pioneers of Waterproof Flexible Flashing for Residential PV Mounting Systems",
+            "heading_size": "h2"
           }
         },
         "text_HyUa9m": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>We have been engineering solar mounting solutions since 1994 with flawless performance—over one million rooftop installations all over Japan and North America. We offer a 25-year warranty on all our products from the installation date. Our <a href=\"https://roof-tech.us/pages/roof-techs-alphaseal-technology\" target=\"_blank\"><strong>AlphaSeal™ Technology </strong></a>is fit for any residential roof for P.V. mounting on asphalt, membrane, or metal roofing.<br/></p>"
+          }
+        },
+        "text_R8PUKa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We partner with over <a href=\"https://roof-tech.us/pages/distributors\" target=\"_blank\"><strong>forty distributors </strong></a>throughout North America and offer full support with installation manuals, installation videos, digital estimator design tools, and in-person training. Download our <a href=\"https://roof-tech.us/pages/stamped-p-e-letters-ibc-and-irc-compliant\" target=\"_blank\"><strong>P.E. Stamped letters </strong></a>in over 45 states and five Canadian territories IBC and IRC compliant.</p>"
+          }
+        },
+        "text_d8JqF7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you want the authentic, waterproof flexible flashing that has captured 70% of Japan’s solar P.V. racking market, choose Roof Tech. Our self-flashing solar mounts, such as the <a href=\"https://roof-tech.us/pages/rt-apex\" target=\"_blank\"><strong>RT-APEX</strong></a> and the <a href=\"https://roof-tech.us/pages/rt-mini-ii\" target=\"_blank\"><strong>RT-MINI II</strong></a>, are known for their efficiency, longevity, and fast installations. <a href=\"https://roof-tech.us/pages/contact-us\" target=\"_blank\"><strong>Contact</strong></a><strong> </strong>our sales team to learn how to improve your solar installations with our solutions.</p>"
           }
         },
         "button_nGrJWe": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -47,6 +89,8 @@
       "block_order": [
         "heading_EzDeE4",
         "text_HyUa9m",
+        "text_R8PUKa",
+        "text_d8JqF7",
         "button_nGrJWe"
       ],
       "name": "t:sections.rich-text.presets.name",
@@ -54,9 +98,9 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     },
     "image_with_text_X3eht9": {
@@ -65,19 +109,20 @@
         "heading_qQFh3R": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Our Values",
             "heading_size": "h1"
           }
         },
         "text_r3nFYQ": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<ul><li>Customers First - Everything we do is centered on the needs of our customers, from the user-friendly design of our products to our superior customer service.</li><li>Trusted Partnerships - We strive for transparency and mutual trust in our business partnerships. By conducting business with integrity, we earn the loyalty of our customers.</li><li>Environmental Responsibility - We aim to minimize the environmental impact of our products and we comply with all environmental regulations.</li><li>Employee-friendly - Work Environment Recognizing that our employees are the public face of our vision and values, we provide a work environment that encourages open communication and ongoing innovation.</li></ul>",
             "text_style": "body"
           }
         },
         "button_kPfJkW": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -92,6 +137,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/about-us-image-roof-tech_648a1218-06bf-42c9-bbb6-aebe7bd14d20.jpg",
         "youtube_video_link": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -103,8 +149,8 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "image_with_text_6fN3U7": {
@@ -113,19 +159,20 @@
         "heading_gNE3LW": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "<strong>From Japan, a legacy of excellence.</strong>",
             "heading_size": "h1"
           }
         },
         "text_CVTAKD": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
+            "text": "<p>Roof Tech’s legacy is linked directly to Yanegiken Technology and Research Institute, our parent company in Japan, which was founded in 1968 to conduct research and development of new roofing technologies. Renowned for its culture of technical excellence and superb customer service, Yanegiken has earned a national reputation as a reliable provider of roofing solutions.<br/><br/>Yanegiken specializes in roofing technologies and solar panel fittings that can withstand the most extreme weather conditions. Roof Tech products are based on Yanegiken’s own development and manufacturing capabilities representing more than four decades of research data.<br/><br/>Over the years, Yanegiken has established joint development agreements with some of the world’s leading manufacturers of solar power systems, including Mitsubishi, Sanyo, Sharp, Panasonic, and Kyocera. Yanegiken earned its IS09001: 1994 Certification in 2000, and its ISO14001: 2004 Certification in 2006.<br/><br/>With the introduction of Roof Tech Inc, its first U.S. subsidiary, Yanegiken is poised to expand its operations both nationally and globally.<br/><br/></p>",
+            "text_style": "subtitle"
           }
         },
         "button_dmW838": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -140,8 +187,9 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/japan-legacy-roof-tech-Yanegiken_731d0b6d-8d5f-4e66-9a84-bd04c0d3634f.jpg",
         "youtube_video_link": "",
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
@@ -151,13 +199,14 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
     "main",
+    "image_banner_rP6nzc",
     "rich_text_7HD6cw",
     "image_with_text_X3eht9",
     "image_with_text_6fN3U7"
