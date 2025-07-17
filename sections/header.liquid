@@ -147,34 +147,6 @@
     border-radius: 50%;
     border: 1px solid #D9DDE3;
   }
-  .slideshow__text h2.banner__heading.inline-richtext.h1 {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  .slideshow__text .banner__text.rte p {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 80px;
-    line-height: 1.4;
-    display: contents;
-  }
-  .slideshow__text .banner__text.rte p strong:first-child{
-      font-size: 80px;
-    color: transparent;
-    -webkit-text-stroke: 1px white;
-    letter-spacing: 0;
-    padding-left: 4px;
-  }
-  .slideshow__text .banner__text.rte p strong {
-    letter-spacing: 4px;
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 1;
-  }
   .slider.slider--everywhere .slider__slide:before {
     z-index: 1;
     content: "";
@@ -195,10 +167,9 @@
   .banner__text.rte.desc {
     border-left: 5px solid #D52722;
     padding-left: 20px;
+    text-align: start;
   }
-  a.header__icon--account {
-    margin-right: 24px;
-  }
+
    @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
@@ -449,12 +420,8 @@
           <style>
               .total-container {
                 display: grid; 
-                place-items: center;
               }
             </style>
-            <div class="total-container" id="cart-total">
-              <span class="centered-text">{{ cart.total_price | money }}</span>
-            </div>
           {% if cart == empty %}
             <span class="svg-wrapper">{{ 'cart-icon.svg' | inline_asset_content }}</span>
           {% else %}
@@ -469,6 +436,10 @@
               <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
             </div>
           {%- endif -%}
+            <div class="total-container" id="cart-total"> 
+              <span>Total</span>
+              <span class="centered-text">{{ cart.total_price | money }}</span>
+            </div>
         </a>
       </div>
     </div>
