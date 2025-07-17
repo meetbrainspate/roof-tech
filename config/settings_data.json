@@ -143,6 +143,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "9675881000081521311": {
+        "type": "shopify://apps/qikify-quick-view/blocks/app-embed/ce27a8e7-5292-4481-881e-08f2136a4e05",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {

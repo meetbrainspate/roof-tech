@@ -1,0 +1,201 @@
+<style>
+  .sales-map-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  .sales-map-image {
+    width: 100%;
+    display: block;
+  }
+  .map-dot {
+    display: block !important;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: 2px solid #fff;
+    z-index: 10;
+  }
+  .popup {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 99;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 260px;
+  }
+  .popup.active {
+    display: block;
+  }
+  .salesperson-info {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .salesperson-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .salesperson-info .info {
+    flex: 1;
+  }
+  .salesperson-info .name {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .salesperson-info .desc {
+    font-size: 13px;
+    color: #555;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.getElementById('sales-map-wrapper');
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+    function showPopup(dot) {
+      const blockId = dot.dataset.blockId;
+      const popup = document.getElementById('popup-' + blockId);
+
+      wrapper.querySelectorAll('.popup').forEach((p) => p.classList.remove('active'));
+
+      if (popup) {
+        popup.classList.add('active');
+        popup.style.position = 'absolute';
+        popup.style.left = `${dot.offsetLeft}px`;
+        popup.style.top = `${dot.offsetTop + 20}px`;
+      }
+    }
+
+    function hideAllPopups() {
+      wrapper.querySelectorAll('.popup').forEach((p) => p.classList.remove('active'));
+    }
+
+    wrapper.querySelectorAll('.map-dot').forEach((dot) => {
+      if (isTouchDevice) {
+        // Mobile behavior: Click
+        dot.addEventListener('click', function (e) {
+          e.stopPropagation();
+          showPopup(dot);
+        });
+      } else {
+        // Desktop behavior: Hover
+        dot.addEventListener('mouseenter', () => showPopup(dot));
+        dot.addEventListener('mouseleave', () => hideAllPopups());
+      }
+    });
+
+    if (isTouchDevice) {
+      // Close popup on outside click (mobile only)
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.map-dot') && !e.target.closest('.popup')) {
+          hideAllPopups();
+        }
+      });
+    }
+  });
+</script>
+
+
+
+
+<div class="sales-map-wrapper" id="sales-map-wrapper">
+  {% if section.settings.map_image %}
+    <img src="{{ section.settings.map_image | img_url: 'master' }}" class="sales-map-image" alt="Sales Map">
+  {% endif %}
+
+  {% for block in section.blocks %}
+    <div
+      class="map-dot"
+      style="top: {{ block.settings.y_pos }}%; left: {{ block.settings.x_pos }}%;"
+      data-block-id="{{ block.id }}"
+    ></div>
+
+    <div class="popup" id="popup-{{ block.id }}">
+      <strong>{{ block.settings.region_name }}</strong>
+      <div class="salesperson-info">
+        {% if block.settings.image %}
+          <img src="{{ block.settings.image | img_url: '100x100' }}" alt="{{ block.settings.name }}">
+        {% endif %}
+        <div class="info">
+          <div class="name">{{ block.settings.name }}</div>
+          <div class="desc">{{ block.settings.description }}</div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Sales Map",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Map Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "region_salesperson",
+      "name": "Salesperson Region",
+      "settings": [
+        {
+          "type": "text",
+          "id": "region_name",
+          "label": "Region Name"
+        },
+        {
+          "type": "range",
+          "id": "x_pos",
+          "label": "X Position (%)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "y_pos",
+          "label": "Y Position (%)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Salesperson Name"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Salesperson Image"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Salesperson Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sales Map"
+    }
+  ]
+}
+{% endschema %}

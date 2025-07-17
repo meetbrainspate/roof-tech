@@ -144,27 +144,27 @@
                   <div class="social-icons">
                     {% if block.settings.social_link_1 != blank %}
                       <a href="{{ block.settings.social_link_1 }}" target="_blank" class="social-icon-item">
-                        {{ 'facebook.svg' | asset_url | image_tag }}
+                        {{ 'facebook.svg' | inline_asset_content }}
                       </a>
                     {% endif %}
                     {% if block.settings.social_link_2 != blank %}
                       <a href="{{ block.settings.social_link_2 }}" target="_blank" class="social-icon-item">
-                        {{ 'x.svg' | asset_url | image_tag }}
+                        {{ 'x.svg' | inline_asset_content }}
                       </a>
                     {% endif %}
                     {% if block.settings.social_link_3 != blank %}
                       <a href="{{ block.settings.social_link_3 }}" target="_blank" class="social-icon-item">
-                        {{ 'instagram.svg' | asset_url | image_tag }}
+                        {{ 'instagram.svg' | inline_asset_content }}
                       </a>
                     {% endif %}
                     {% if block.settings.social_link_4 != blank %}
                       <a href="{{ block.settings.social_link_4 }}" target="_blank" class="social-icon-item">
-                        {{ 'linkedin.svg' | asset_url | image_tag }}
+                        {{ 'linkedin.svg' | inline_asset_content }}
                       </a>
                     {% endif %}
                     {% if block.settings.social_link_5 != blank %}
                       <a href="{{ block.settings.social_link_5 }}" target="_blank" class="social-icon-item">
-                        {{ 'mail.svg' | asset_url | image_tag }}
+                        {{ 'mail.svg' | inline_asset_content }}
                       </a>
                     {% endif %}
                   </div>
