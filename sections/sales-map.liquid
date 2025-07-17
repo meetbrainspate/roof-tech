@@ -8,7 +8,7 @@
     display: block;
   }
   .map-dot {
-    display: block;
+    display: block !important;
     position: absolute;
     width: 16px;
     height: 16px;
@@ -61,21 +61,31 @@
   document.addEventListener('DOMContentLoaded', function () {
     const wrapper = document.getElementById('sales-map-wrapper');
 
+    // Attach click event to each dot
     wrapper.querySelectorAll('.map-dot').forEach((dot) => {
       dot.addEventListener('click', function () {
-        const regionId = dot.dataset.regionId;
+        const blockId = dot.dataset.blockId;
 
+        // Hide all popups
         wrapper.querySelectorAll('.popup').forEach((p) => p.classList.remove('active'));
 
-        const popup = document.getElementById('popup-' + regionId);
+        // Show the correct popup
+        const popup = document.getElementById('popup-' + blockId);
         if (popup) {
           popup.classList.add('active');
-          popup.style.left = dot.style.left;
-          popup.style.top = `calc(${dot.style.top} + 20px)`;
+
+          // Position the popup near the dot
+          const dotRect = dot.getBoundingClientRect();
+          const wrapperRect = wrapper.getBoundingClientRect();
+          
+          popup.style.position = 'absolute';
+          popup.style.left = `${dot.offsetLeft}px`;
+          popup.style.top = `${dot.offsetTop + 20}px`;
         }
       });
     });
 
+    // Close popup on click outside
     document.addEventListener('click', function (e) {
       if (!e.target.closest('.map-dot') && !e.target.closest('.popup')) {
         wrapper.querySelectorAll('.popup').forEach((p) => p.classList.remove('active'));
@@ -84,9 +94,10 @@
   });
 </script>
 
+
 <div class="sales-map-wrapper" id="sales-map-wrapper">
   {% if section.settings.map_image %}
-    <img src="{{ section.settings.map_image | img_url: 'master' }}" class="sales-map-image" alt="Sales Map">
+    <img src="{{ section.settings.map_image | image_url: 'master' }}" class="sales-map-image" alt="Sales Map">
   {% endif %}
 
   {% for block in section.blocks %}
@@ -100,7 +111,7 @@
       <strong>{{ block.settings.region_name }}</strong>
       <div class="salesperson-info">
         {% if block.settings.image %}
-          <img src="{{ block.settings.image | img_url: '100x100' }}" alt="{{ block.settings.name }}">
+          <img src="{{ block.settings.image | image_url: '100x100' }}" alt="{{ block.settings.name }}">
         {% endif %}
         <div class="info">
           <div class="name">{{ block.settings.name }}</div>
