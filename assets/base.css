@@ -2091,7 +2091,7 @@ input[type='checkbox'] {
   align-items: center;
   font-size: 0.9rem;
   bottom: 0.8rem;
-  left: 2.2rem;
+  left: -1.1rem;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
 
@@ -2579,6 +2579,7 @@ li a#HeaderMenu-contact-us:hover:after{
 .header__icon .svg-wrapper {
   width: 44px;
   height: 44px;
+  margin-right: 10px;
 }
 
 .header__icon::after {
@@ -2606,7 +2607,15 @@ li a#HeaderMenu-contact-us:hover:after{
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
+  margin-right: 0;
+  margin-left: 20px;
+  text-decoration: none !important;
+}
+.total-container span {
+    line-height: 18px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .header__icon--menu[aria-expanded='true']::before {
@@ -3754,6 +3763,17 @@ a.button.button--primary1{
 a.button.button--primary1:after{
   filter: brightness(0) saturate(100%) invert(38%) sepia(20%) saturate(4243%) hue-rotate(332deg) brightness(79%) contrast(119%);
 }
+.total-container span:first-child {
+    color: #9AA5B3;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: flex-start;
+    line-height: 14px;
+  }
+.total-container {
+    place-items: normal;
+}
 h2.inline-richtext {
     color: #000000;
     font-weight: 700;
@@ -4298,35 +4318,37 @@ div#counter-stats {
 .footer__column-two > div:first-child{
   overflow: hidden;
 }
-
-  .slideshow__text h2.banner__heading.inline-richtext.h1 {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  .slideshow__text .banner__text.rte p {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: 900;
+.slideshow__text h2.banner__heading.inline-richtext.h1 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.slideshow__text .banner__text.rte p {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 1.4;
+  display: contents;
+}
+.slideshow__text .banner__text.rte p strong:first-child{
     font-size: 80px;
-    line-height: 1.4;
-    display: contents;
-  }
-  .slideshow__text .banner__text.rte p strong:first-child{
-      font-size: 80px;
-    color: transparent;
-    -webkit-text-stroke: 1px white;
-    letter-spacing: 0;
-    padding-left: 4px;
-  }
-  .slideshow__text .banner__text.rte p strong {
-    letter-spacing: 4px;
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 1;
-  }
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 0;
+  padding-left: 4px;
+}
+.slideshow__text .banner__text.rte p strong {
+  letter-spacing: 4px;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+}
+a.header__icon--account {
+  margin-right: 24px;
+}
 
 @media screen and (max-width: 1400px){
   .custom-header-row.custom-header-bottom{
@@ -4446,6 +4468,9 @@ div#counter-stats {
   }
   .header__heading-logo-wrapper{
     margin-left: 20px
+  }
+    a.header__icon--account {
+    margin-right: 15px;
   }
 }
 @media screen and (max-width: 767px){
@@ -4627,5 +4652,53 @@ div#counter-stats {
   }
   .search-wrapper .search-modal__form.visible{
       top: 75px;
+  }
+  .header__icon--cart{
+        margin-left: 0;
+  }
+  a.header__icon--account {
+    margin-right: 7px !important;
+  }
+  .header__icon .svg-wrapper {
+    width: 33px;
+    height: 33px;
+    margin-right: 0;
+  }
+  .search-wrapper{
+    line-height: 55px !important;
+    margin-right: 10px !important;
+  }
+  .header__heading-logo{
+        width: 150px;
+  }
+  .header__heading-logo-wrapper {
+    margin-left: 10px;
+  }
+  .svg-wrapper{
+    width: 18px;
+    height: 18px;
+  }
+  .header__icon account-icon .svg-wrapper svg {
+    width: 16px;
+    height: 16px;
+  }
+  .total-container {
+    display: none !important;
+  }
+  .header__icons{
+    padding-right: 0;
+  }
+  .cart-count-bubble{
+        left: 1.5rem;
+  }
+  .header__icon, .header__icon--cart .icon{
+    width: 3rem;
+  }
+  .header__icon .svg-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+  .search-wrapper .search-modal__form.visible{
+    top: 70px;
   }
 }
