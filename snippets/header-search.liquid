@@ -68,7 +68,7 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .search-wrapper .search-modal__form {
     display: none;
     position: absolute;
@@ -83,10 +83,18 @@
 
   .search-wrapper .search-modal__form.visible {
     display: block;
+    width: 100%;
+    top: 100px;
   }
 
   .search-toggle-button {
     display: inline-block;
+  }
+  .search-wrapper {
+    margin-left: auto;
+    height: 44px;
+    line-height: 50px;
+    margin-right: 20px;
   }
 }
 </style>

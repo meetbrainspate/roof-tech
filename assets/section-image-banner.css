@@ -156,6 +156,9 @@
   .banner--stacked .banner__media {
     flex-direction: column;
   }
+   .banner--medium:not(.banner--adapt) {
+    height: 56rem;
+  }
 }
 
 .banner__media {
