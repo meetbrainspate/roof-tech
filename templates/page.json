@@ -241,6 +241,74 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_aUVXx7": {
+      "type": "rich-text",
+      "blocks": {
+        "text_JwNCx8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This combination of RT-Butyl and RT-Screws creates a <strong>100% waterproof seal while maintaining the structural integrity of rafters, OSB, and plywood.</strong></p><p></p><p>Roof Tech’s AlphaSeal® system also stands out with an <strong>industry-leading operating temperature of up to 248°F.</strong> With roof temperatures often reaching 200°F, products rated at or below this threshold are likely to degrade over time, while AlphaSeal® ensures lasting durability and performance even in the most extreme conditions!</p><p><strong>With over 30 years of proven performance,</strong> AlphaSeal® has become the industry’s #1 flexible flashing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_JwNCx8"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "rich_text_tiaJkF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jrthyV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Testing",
+            "heading_size": "h1"
+          }
+        },
+        "text_gY7qL6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Roof Tech makes the transition to 100% caulk-free mounting with full confidence.</p><p>In July 2013, we had RT-Butyl water-tested to <strong>Standard ASTM E2140</strong> for six hours under a 6” water column creating pressure of 31.2psf.</p>"
+          }
+        },
+        "text_LzRCXJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The result? <strong>Not a single water leak.</strong></p><p>In 2014, we had the <strong>International Code Council (ICC)</strong> test the AlphaSeal® system for thermal and moisture protection. While typical sealants and other flexible flashings have a maximum service temperature between 160°F and 200°F, ours withstands temperature fluctuations from -40°F to 248°F, making it <strong>impervious to any kind of extreme weather.</strong></p>"
+          }
+        },
+        "text_7x66iJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>“AlphaSeal® enables Roof Tech mounting systems to be installed more quickly, easily, and safely than any other conventional mounting product. Plus, our customers have the added confidence of our 25-year warranty.”- Ryan Williams, Southeast Technical Sales Lead</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jrthyV",
+        "text_gY7qL6",
+        "text_LzRCXJ",
+        "text_7x66iJ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -249,6 +317,8 @@
     "multicolumn_gzxjjA",
     "image_with_text_ip8bN9",
     "rich_text_qaJyPA",
-    "multicolumn_pLdDwM"
+    "multicolumn_pLdDwM",
+    "rich_text_aUVXx7",
+    "rich_text_tiaJkF"
   ]
 }
