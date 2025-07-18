@@ -35,7 +35,7 @@
       "settings": {
         "image": "shopify://shop_images/subpage-banner.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "top-left",
         "desktop_content_alignment": "center",
