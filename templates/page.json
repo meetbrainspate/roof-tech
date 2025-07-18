@@ -71,7 +71,7 @@
       "custom_css": [
         ".meet-team-section ul.multicolumn-list li {border: 0; padding: 0;}",
         ".meet-team-section .multicolumn-card-spacing {background: none;}",
-        ".meet-team-section .multicolumn-card-spacing img {width: auto; height: auto; margin: 0 auto; text-align: center; inset: 0;}",
+        ".meet-team-section .multicolumn-card-spacing img {width: auto; height: auto; margin: 0 auto; text-align: center; inset: 0; position: relative;}",
         ".meet-team-section .multicolumn-card-spacing .media.media--transparent.media--adapt {overflow: unset; height: 100%; padding: unset !important; position: relative;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
