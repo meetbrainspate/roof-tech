@@ -51,68 +51,166 @@
         "column_kkMkrA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/brendan_o_loole_north.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Kevin Shimokobe",
+            "text": "<p>Chief Executive Officer</p>",
             "link_label": "Read More",
             "link": "#read-more",
             "social_link_1": "shopify://collections",
-            "social_link_2": "",
-            "social_link_3": "",
-            "social_link_4": "",
-            "social_link_5": ""
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
           }
         },
-        "column_YLfPEp": {
+        "column_KWCKXz": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "read",
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Milton Nogueira",
+            "text": "<p>Director of Operations</p>",
+            "link_label": "Read More",
             "link": "#read-more",
-            "social_link_1": "",
-            "social_link_2": "",
-            "social_link_3": "",
-            "social_link_4": "",
-            "social_link_5": ""
+            "social_link_1": "shopify://collections",
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
           }
         },
-        "column_eraWJn": {
+        "column_dgeYAg": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
-            "social_link_1": "",
-            "social_link_2": "",
-            "social_link_3": "",
-            "social_link_4": "",
-            "social_link_5": ""
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Guy Wellman",
+            "text": "<p>Director of Sales</p>",
+            "link_label": "Read More",
+            "link": "#read-more",
+            "social_link_1": "shopify://collections",
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
+          }
+        },
+        "column_YFhYwT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Ryan Williams",
+            "text": "<p>South Technical Sales Lead</p>",
+            "link_label": "Read More",
+            "link": "#read-more",
+            "social_link_1": "shopify://collections",
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
+          }
+        },
+        "column_G4Mtmy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Ryan Lingenfelder's",
+            "text": "<p>RT-APEX Product Manager & Trainer</p>",
+            "link_label": "Read More",
+            "link": "#read-more",
+            "social_link_1": "shopify://collections",
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
+          }
+        },
+        "column_7YhkcB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Sehrish Dhanani",
+            "text": "<p>Marketing Manager</p>",
+            "link_label": "Read More",
+            "link": "#read-more",
+            "social_link_1": "shopify://collections",
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
+          }
+        },
+        "column_4nDF4g": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Yukiko Sabio",
+            "text": "<p>Sales Admin</p>",
+            "link_label": "Read More",
+            "link": "#read-more",
+            "social_link_1": "shopify://collections",
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
+          }
+        },
+        "column_BDPVyL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Mariko Horike",
+            "text": "<p>Logistics Admin</p>",
+            "link_label": "Read More",
+            "link": "#read-more",
+            "social_link_1": "shopify://collections",
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
+          }
+        },
+        "column_YKEtVB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kevin-shimokobe.png",
+            "title": "Ronald Webb",
+            "text": "<p>Controller</p>",
+            "link_label": "Read More",
+            "link": "#read-more",
+            "social_link_1": "shopify://collections",
+            "social_link_2": "#",
+            "social_link_3": "#",
+            "social_link_4": "#",
+            "social_link_5": "#"
           }
         }
       },
       "block_order": [
         "column_kkMkrA",
-        "column_YLfPEp",
-        "column_eraWJn"
+        "column_KWCKXz",
+        "column_dgeYAg",
+        "column_YFhYwT",
+        "column_G4Mtmy",
+        "column_7YhkcB",
+        "column_4nDF4g",
+        "column_BDPVyL",
+        "column_YKEtVB"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
+        "title": "Our entire team is spread throughout North America to serve our Distributor partnerships regionally. The management team works closely to support our sales, marketing, and administrative departments for a highly efficient autonomous flow. We all partner together for multiple local and regional events to promote a sustainable environment from one residential roof to another. Connect with us below individually or contact us as a team here!",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 80
       }
     },
     "sales_map_Rake8t": {
