@@ -132,23 +132,47 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_z7HaGK": {
-      "type": "image-with-text",
-      "name": "t:sections.image-with-text.presets.name",
+    "rich_text_qaJyPA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fwaXep": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Is The AlphaSeal® System?",
+            "heading_size": "h1"
+          }
+        },
+        "text_ddUrAR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unlike standard top-down butyl, AlphaSeal® is<strong>a combination of 2 Roof Tech proprietary products:<br/><br/>RT-BUTYL</strong> - A proprietary butyl composed of synthetic rubber copolymer of isobutylene with isoprene that delivers superior flexibility and is completely impermeable to moisture.<br/><br/><strong>The RT-Butyl was engineered in Japan to withstand extreme climates—including typhoons, heavy snowfall, torrential rain, and intense heat.</strong> It is also resistant to mildew, acids, alkalis, salts, and aging from UV light.<br/></p><p><strong>RT-SCREWS</strong> - Proprietary 5mm woodscrews, designed to embed into wood substrates without compromising their integrity.</p>"
+          }
+        },
+        "button_fGLVVA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fwaXep",
+        "text_ddUrAR",
+        "button_fGLVVA"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "youtube_video_link": "",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -157,6 +181,6 @@
     "image_banner_4izLPQ",
     "multicolumn_gzxjjA",
     "image_with_text_ip8bN9",
-    "image_with_text_z7HaGK"
+    "rich_text_qaJyPA"
   ]
 }
