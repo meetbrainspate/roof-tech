@@ -309,6 +309,85 @@
         "padding_top": 0,
         "padding_bottom": 60
       }
+    },
+    "multicolumn_WCy3yc": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PkBKGE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/alpha_seal_testim_3_b8057c6a-5d7e-43e2-b2d5-e7c132948bd8.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "designation": "",
+            "social_link_1": "",
+            "social_link_2": "",
+            "social_link_3": "",
+            "social_link_4": "",
+            "social_link_5": ""
+          }
+        },
+        "column_WdxGhf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/alpha_seal_testimonials_2_4b223096-7a99-4adb-a79d-2668a94f49d2.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "designation": "",
+            "social_link_1": "",
+            "social_link_2": "",
+            "social_link_3": "",
+            "social_link_4": "",
+            "social_link_5": ""
+          }
+        },
+        "column_7MD4Hd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/alpha_seal_testimonials_8804f5ce-a18c-4d04-9424-3efd33d33757.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "designation": "",
+            "social_link_1": "",
+            "social_link_2": "",
+            "social_link_3": "",
+            "social_link_4": "",
+            "social_link_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_PkBKGE",
+        "column_WdxGhf",
+        "column_7MD4Hd"
+      ],
+      "custom_css": [
+        ".meet-team-section ul.multicolumn-list li {border: 0; padding: 0;}",
+        ".meet-team-section .multicolumn-card-spacing {background: none;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -319,6 +398,7 @@
     "rich_text_qaJyPA",
     "multicolumn_pLdDwM",
     "rich_text_aUVXx7",
-    "rich_text_tiaJkF"
+    "rich_text_tiaJkF",
+    "multicolumn_WCy3yc"
   ]
 }
