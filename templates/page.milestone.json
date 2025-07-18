@@ -84,20 +84,124 @@
           "type": "milestone",
           "settings": {
             "year": "2021",
-            "description": "<p>dfhyetytyre</p>"
+            "description": "<ul><li>Roof Tech launched the RT MINI II, the second generation of the RT-MINI. The new design uses less aluminum, making it a more efficient design that reduces raw materials and decreases logistic expenses.</li><li>The RT-MINI II was approved for HVHZ projects in Florida. After further testing of our RT-MINI II to withstand wind speeds up to 180mph, all solar installation companies that install in Florida can use the RT-MINI II fully.</li><li>Roof Tech names their proprietary RT-Butyl and our stainless wood screws as AlphaSeal™ Technology, making it the first integrated mounting solution that’s 100% caulk-free.</li><li>2021 was the biggest year of RT-APEX roadshows to date! Due to many cancellations of tradeshows, the Roof Tech team hit the road hard, bringing the show to you!</li><li>Roof Tech received a significant market share in Canada's solar market, making us one of their top preferred flashing method in residential solar.</li><li>The Roof Tech team grew by adding three more team members to assist the sales team, accounting, and executive management team!</li></ul>"
           }
         },
         "milestone_wWc9d8": {
           "type": "milestone",
           "settings": {
-            "year": "2022",
-            "description": "<p>sgtsttertewr</p>"
+            "year": "2020",
+            "description": "<ul><li>Roof Tech brings innovation with a pass-through roof entry bracket, the RT-REB</li><li>Roof Tech raises the limited warranty to 25 yr. including its flagship RT Butyl “flexible flashing”</li><li>Stamped P.E. Letters for the US gets the IBC 2018 update (ASCE 7-16)</li></ul>"
+          }
+        },
+        "milestone_qMTHFM": {
+          "type": "milestone",
+          "settings": {
+            "year": "2019",
+            "description": "<ul><li>Estimated 1,000,000 mark of PV systems installed in Japan and USA with Yanegiken/Roof Tech mounting systems.</li><li>The new rail-less PV Mounting RT APEX gets its structural tests, P.E. Stamped Letters along with the UL 2703 listing of over 100 available PV Modules and successfully debuts in Colorado, New York, Florida and Texas.</li></ul>"
+          }
+        },
+        "milestone_LG4nDB": {
+          "type": "milestone",
+          "settings": {
+            "year": "2018",
+            "description": "<p>Roof Tech launched the RT MINI. In a short time it has become the most popular mounting base. Engineered with the same proprietary RT Butyl (Flexible Flashing system developed by Yanegiken since 1994), The MINI is a self-flashing mounting system that Yanegiken has been using since 1994.</p>"
+          }
+        },
+        "milestone_QHJEmV": {
+          "type": "milestone",
+          "settings": {
+            "year": "2017",
+            "description": "<ul><li>Roof Tech completes its 5th year of incorporation in the U.S.</li><li>Nearly 5,000 PV systems installed in the U.S. with Roof Tech’s self-flashing, rail-less mounting system</li><li>Launch of Roof Tech Gen II rail-less mounting solution with fewer parts and faster install time.</li><li>PE stamped letters with Roof Tech products extended to more than 37 states and Canada</li><li>Roof Tech exhibits its products at the nation’s top three solar conferences:SPI, NABCEP and ISNA, and participates in local events throughout the United States and Canada</li></ul>"
+          }
+        },
+        "milestone_34RnJi": {
+          "type": "milestone",
+          "settings": {
+            "year": "2016",
+            "description": "<p>As a staunch industry advocate, in early 2016 Roof Tech played a pivotal role in the formation of the PV Mounting System Manufacturers Committee (MSMC), a groundbreaking collaboration among the nation’s largest mounting and racking suppliers.</p>"
+          }
+        },
+        "milestone_3nkYfX": {
+          "type": "milestone",
+          "settings": {
+            "year": "2015",
+            "description": "<p><strong>April:</strong>RT-[E] MOUNT is selected as one of the top entries by the Intersolar AWARD 2015 expert panel.<br/><strong>July:</strong>Exhibit at Intersolar North America<br/><strong>August:</strong>Exhibit at SOMO<br/><strong>September:</strong>Exhibit at Solar Power International<br/><strong>Aug:</strong>Additional PE reports completed bringing total to 29 states</p>"
+          }
+        },
+        "milestone_xc9zpn": {
+          "type": "milestone",
+          "settings": {
+            "year": "2014",
+            "description": "<p><strong>January:</strong>RT-[E] Mount AIR™ product release<br/><strong>March:</strong>ETL 2703 certification received<br/><strong>April:</strong>First installation of RT-[E] Mount<br/><strong>May:</strong>Testing phase completed for ICC Evaluation Report<br/><strong>June:</strong>Additional PE reports completed bringing total to 22 states<br/><strong>July:</strong>Roof Tech introduces expanded product line at Intersolar North America<br/><strong>July:</strong>First installation of RT-[E] Mount AIR<br/><strong>August:</strong>Expansion of Roof Tech national sales team</p>"
+          }
+        },
+        "milestone_DyrKBK": {
+          "type": "milestone",
+          "settings": {
+            "year": "2013",
+            "description": "<p><strong>January:</strong>Roof Tech office opens first U.S. office in Novato, California<br/><strong>June:</strong>ASTM 2140 evaluation completed to test products underwater<br/><strong>December:</strong>First set of PE reports completed for 17 states</p>"
+          }
+        },
+        "milestone_TAeiNg": {
+          "type": "milestone",
+          "settings": {
+            "year": "2012",
+            "description": "<p><strong>June:</strong>Roof Tech incorporated in State of California<br/><strong>July:</strong>Roof Tech debuts U.S. product line at Intersolar North Americ.</p>"
+          }
+        },
+        "milestone_kfVxMQ": {
+          "type": "milestone",
+          "settings": {
+            "year": "2011",
+            "description": "<p><strong>March:</strong>March: First PV array installed with U set Solar®</p>"
+          }
+        },
+        "milestone_qfkfPP": {
+          "type": "milestone",
+          "settings": {
+            "year": "2005-2010",
+            "description": "<p><strong>2010:</strong> Hekinan Distribution Center opening<br/><strong>2008:</strong> Tokyo Branch opening<br/><strong>2007:</strong> Joint development of solar power system stands for Honda Soltec Co., Ltd.<br/><strong>2006:</strong> Development of solar power system stands for Mitsubishi Electric Corporation.<br/>Total shipments of residential solar power system stands reached 40,000 buildings<br/><strong>2005:</strong> Aichi Expo “Solar Bench” exhibit</p><ul><li>2005 Regional consortium research and development project implementation (concentrator solar power cell system stands)</li></ul>"
+          }
+        },
+        "milestone_FamzF6": {
+          "type": "milestone",
+          "settings": {
+            "year": "1999-2004",
+            "description": "<p><strong>2004:</strong> Total shipments of residential solar power system stands reached 30,000 buildings<br/><strong>2003: </strong>Joint development with Mitsubishi Electric Corporation of slate metal</p><ul><li>Joint development with Sekisui Chemical Co., Ltd. of a method of installing structurally integrated solar power cells<br/></li></ul><p><strong>2002: </strong>Distribution Center opening<br/></p><ul><li>Development of solar power system stands for Sanyo Electric Co., Ltd.</li><li>Total shipments of residential solar power system stands reached 20,000 buildings<br/></li></ul><p><strong>2000: </strong>IS09001:1994 Certification<br/></p><ul><li>Development of stands for solar energy collectors Development of solar power system stands for Kawasaki Heavy Industries Ltd.</li><li>Total shipments of residential solar power system stands reached 10,000 buildings</li></ul><p><strong>1999: </strong>Aichi Prefecture creative engineering research and development aid project implementation (solar power system integrated roof.<br/></p><ul><li>Start of construction contracts for solar power systems</li><li>Development of general purpose brackets for solar power systems</li><li>Development of decorative covers for solar power systems for Mitsubishi Electric Corporation.</li><li>Development of wiring tiles for connecting outdoor cables</li></ul>"
+          }
+        },
+        "milestone_qr7K6k": {
+          "type": "milestone",
+          "settings": {
+            "year": "1994-2004",
+            "description": "<p><strong>1998:</strong> Joint development of solar power system stands with for Sharp Corporation.</p><ul><li>Start of development of solar power system stands for public industry use</li><li>Aichi Prefecture research and development aid project implementation (support tile development)<br/></li></ul><p><strong>1996:</strong>Development of the “Mr. Ventilation” ventilation system for high durability housing/long service life conversion<br/><strong>1995:</strong>Ministry of Construction High-Rise Architecture Evaluation Certification (Kinsai Construction Method)<br/><strong>1994:</strong>Start of development of residential solar power system stands</p>"
+          }
+        },
+        "milestone_GrXKKN": {
+          "type": "milestone",
+          "settings": {
+            "year": "Roofing Legacy 1968-1994",
+            "description": "<p><strong>1989:Wind-resistant/earthquake-resistant “Kinsa Tile” development1985:Head office relocation1975:Incorporation1968:</strong>Roofing work contracting business establishment</p>"
           }
         }
       },
       "block_order": [
         "milestone_Gd6YDW",
-        "milestone_wWc9d8"
+        "milestone_wWc9d8",
+        "milestone_qMTHFM",
+        "milestone_LG4nDB",
+        "milestone_QHJEmV",
+        "milestone_34RnJi",
+        "milestone_3nkYfX",
+        "milestone_xc9zpn",
+        "milestone_DyrKBK",
+        "milestone_TAeiNg",
+        "milestone_kfVxMQ",
+        "milestone_qfkfPP",
+        "milestone_FamzF6",
+        "milestone_qr7K6k",
+        "milestone_GrXKKN"
       ],
       "name": "Milestone Timeline",
       "settings": {}
