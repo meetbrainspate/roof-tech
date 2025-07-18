@@ -15,9 +15,35 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "milestone_timeline_caTwzz": {
+      "type": "milestone-timeline",
+      "blocks": {
+        "milestone_Gd6YDW": {
+          "type": "milestone",
+          "settings": {
+            "year": "2021",
+            "description": "<p>dfhyetytyre</p>"
+          }
+        },
+        "milestone_wWc9d8": {
+          "type": "milestone",
+          "settings": {
+            "year": "2022",
+            "description": "<p>sgtsttertewr</p>"
+          }
+        }
+      },
+      "block_order": [
+        "milestone_Gd6YDW",
+        "milestone_wWc9d8"
+      ],
+      "name": "Milestone Timeline",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "milestone_timeline_caTwzz"
   ]
 }
