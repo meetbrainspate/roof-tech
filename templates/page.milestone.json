@@ -17,6 +17,66 @@
         "padding_bottom": 28
       }
     },
+    "image_banner_QUhqxK": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_NiwcQ9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Milestones",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NiwcQ9"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/subpage-banner.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "top-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "left",
+        "show_text_below": true
+      }
+    },
+    "rich_text_HpJEmx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DTaWmT": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Growing our presence throughout the U.S.</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_NEtxxN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Since establishing our business in June 2012, we have continued to expand our presence throughout the U.S. Roof Tech’s product introductions at Intersolar North America in 2013 and 2014 instantly attracted interest from dozens of PV installers and distributors. Today, our momentum is growing as more and more customers discover the ease, reliability and cost savings of our residential PV mounting solutions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DTaWmT",
+        "text_NEtxxN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
     "milestone_timeline_caTwzz": {
       "type": "milestone-timeline",
       "blocks": {
@@ -45,6 +105,8 @@
   },
   "order": [
     "main",
+    "image_banner_QUhqxK",
+    "rich_text_HpJEmx",
     "milestone_timeline_caTwzz"
   ]
 }
