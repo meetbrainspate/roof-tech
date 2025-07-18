@@ -147,23 +147,11 @@
           "settings": {
             "text": "<p>Unlike standard top-down butyl, AlphaSeal® is<strong>a combination of 2 Roof Tech proprietary products:<br/><br/>RT-BUTYL</strong> - A proprietary butyl composed of synthetic rubber copolymer of isobutylene with isoprene that delivers superior flexibility and is completely impermeable to moisture.<br/><br/><strong>The RT-Butyl was engineered in Japan to withstand extreme climates—including typhoons, heavy snowfall, torrential rain, and intense heat.</strong> It is also resistant to mildew, acids, alkalis, salts, and aging from UV light.<br/></p><p><strong>RT-SCREWS</strong> - Proprietary 5mm woodscrews, designed to embed into wood substrates without compromising their integrity.</p>"
           }
-        },
-        "button_fGLVVA": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_fwaXep",
-        "text_ddUrAR",
-        "button_fGLVVA"
+        "text_ddUrAR"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -174,6 +162,85 @@
         "padding_top": 32,
         "padding_bottom": 32
       }
+    },
+    "multicolumn_pLdDwM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nqcyhT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/alpha-seal-pad_64af517c-6b45-4e68-9a64-adbbbe09e676.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "designation": "",
+            "social_link_1": "",
+            "social_link_2": "",
+            "social_link_3": "",
+            "social_link_4": "",
+            "social_link_5": ""
+          }
+        },
+        "column_g6FxWb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/alpha-seal-screw_f2c68341-c4df-4f81-9188-67d14f2f8548.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "designation": "",
+            "social_link_1": "",
+            "social_link_2": "",
+            "social_link_3": "",
+            "social_link_4": "",
+            "social_link_5": ""
+          }
+        },
+        "column_JXyyeh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/alpha-seal-logo_b2a6553d-70c7-4789-80eb-1e43fc40b29f.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "designation": "",
+            "social_link_1": "",
+            "social_link_2": "",
+            "social_link_3": "",
+            "social_link_4": "",
+            "social_link_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nqcyhT",
+        "column_g6FxWb",
+        "column_JXyyeh"
+      ],
+      "custom_css": [
+        ".meet-team-section ul.multicolumn-list li {border: 0; padding: 0;}",
+        ".meet-team-section .multicolumn-card-spacing {background: none;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -181,6 +248,7 @@
     "image_banner_4izLPQ",
     "multicolumn_gzxjjA",
     "image_with_text_ip8bN9",
-    "rich_text_qaJyPA"
+    "rich_text_qaJyPA",
+    "multicolumn_pLdDwM"
   ]
 }
