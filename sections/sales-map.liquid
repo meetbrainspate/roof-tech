@@ -106,33 +106,33 @@
 </script>
 
 
+<div class="page-width map-section">
+  <div class="sales-map-wrapper" id="sales-map-wrapper">
+    {% if section.settings.map_image %}
+      <img src="{{ section.settings.map_image | img_url: 'master' }}" class="sales-map-image" alt="Sales Map">
+    {% endif %}
 
+    {% for block in section.blocks %}
+      <div
+        class="map-dot"
+        style="top: {{ block.settings.y_pos }}%; left: {{ block.settings.x_pos }}%;"
+        data-block-id="{{ block.id }}"
+      ></div>
 
-<div class="sales-map-wrapper" id="sales-map-wrapper">
-  {% if section.settings.map_image %}
-    <img src="{{ section.settings.map_image | img_url: 'master' }}" class="sales-map-image" alt="Sales Map">
-  {% endif %}
-
-  {% for block in section.blocks %}
-    <div
-      class="map-dot"
-      style="top: {{ block.settings.y_pos }}%; left: {{ block.settings.x_pos }}%;"
-      data-block-id="{{ block.id }}"
-    ></div>
-
-    <div class="popup" id="popup-{{ block.id }}">
-      <strong>{{ block.settings.region_name }}</strong>
-      <div class="salesperson-info">
-        {% if block.settings.image %}
-          <img src="{{ block.settings.image | img_url: '100x100' }}" alt="{{ block.settings.name }}">
-        {% endif %}
-        <div class="info">
-          <div class="name">{{ block.settings.name }}</div>
-          <div class="desc">{{ block.settings.description }}</div>
+      <div class="popup" id="popup-{{ block.id }}">
+        <strong>{{ block.settings.region_name }}</strong>
+        <div class="salesperson-info">
+          {% if block.settings.image %}
+            <img src="{{ block.settings.image | img_url: '100x100' }}" alt="{{ block.settings.name }}">
+          {% endif %}
+          <div class="info">
+            <div class="name">{{ block.settings.name }}</div>
+            <div class="desc">{{ block.settings.description }}</div>
+          </div>
         </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
