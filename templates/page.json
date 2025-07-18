@@ -44,10 +44,52 @@
         "mobile_content_alignment": "left",
         "show_text_below": true
       }
+    },
+    "multicolumn_gzxjjA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_8MHmPc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/alpha-seal-logo-system_da015995-909a-4e2b-93d7-0c275909f14b.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "designation": "",
+            "social_link_1": "",
+            "social_link_2": "",
+            "social_link_3": "",
+            "social_link_4": "",
+            "social_link_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_8MHmPc"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "image_banner_4izLPQ"
+    "image_banner_4izLPQ",
+    "multicolumn_gzxjjA"
   ]
 }
