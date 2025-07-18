@@ -70,11 +70,11 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
@@ -85,11 +85,52 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_ip8bN9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HLNbzx": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_Kqjkdw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The first top-down flexible flashing in the industry<strong>fully certified by the International Code Council (ICC).<br/><br/></strong>In 2013, Roof Tech introduced the AlphaSeal® System, <strong>an impenetrable flashing system with the highest operating temperature in the industry of 248°F.</strong></p><p>All of Roof Tech’s mounting solutions are fastened with wood screws directly to the roof sheathing or rafters, <strong>eliminating the need to drill pilot holes or pre-caulking once and for all!</strong> That means less time on the roof, cost savings, and reliable, leak-free performance.<br/><br/><em>“Our flashing has stood the test of time for the last 30<br/>years,” - Masashi Imazeki, Design Engineer.</em></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HLNbzx",
+        "text_Kqjkdw"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/alpha-seal-firs-img_405556c4-f126-453a-a8e2-a48612da771a.png",
+        "youtube_video_link": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "image_banner_4izLPQ",
-    "multicolumn_gzxjjA"
+    "multicolumn_gzxjjA",
+    "image_with_text_ip8bN9"
   ]
 }
