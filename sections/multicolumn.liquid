@@ -171,6 +171,7 @@
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
+                  <div class="rte popup-description-here" style="display:none;">{{ block.settings.designation }}</div>
                   <div class="social-icons">
                     {% if block.settings.social_link_1 != blank %}
                       <a href="{{ block.settings.social_link_1 }}" target="_blank" class="social-icon-item">
@@ -277,10 +278,12 @@
         const imgEl = li.querySelector('img');
         const titleEl = li.querySelector('.inline-richtext');
         const descEl = li.querySelector('.rte');
+        const descnew = li.querySelector('.popup-description-here');
         const socialEl = li.querySelector('.social-icons');
 
         document.getElementById('popup-img').src = imgEl?.src || '';
         document.getElementById('popup-title').innerHTML = titleEl?.innerHTML || '';
+        document.getElementById('popup-desc').innerHTML = descnew?.innerHTML || '';
         document.getElementById('popup-description').innerHTML = descEl?.innerHTML || '';
         document.getElementById('popup-social-icons').innerHTML = socialEl?.innerHTML || '';
 
