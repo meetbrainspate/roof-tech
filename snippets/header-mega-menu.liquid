@@ -26,64 +26,64 @@
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
               <div
-                id="MegaMenu-Content-{{ forloop.index }}"
-                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
-                tabindex="-1"
-              >
-                <div class="mega-menu__wrapper page-width">
-                  <ul
-                    class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
-                    role="list"
-                  >
-                    {%- for childlink in link.links -%}
-                      <li>
-                        <a
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          href="{{ childlink.url }}"
-                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                          {% if childlink.current %} aria-current="page"{% endif %}
-                        >
-                          {{ childlink.title | escape }}
-                        </a>
-                        {%- if childlink.links != blank -%}
-                          <ul class="list-unstyled" role="list">
-                            {%- for grandchildlink in childlink.links -%}
-                              <li>
-                                <a
-                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                  href="{{ grandchildlink.url }}"
-                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                  {% if grandchildlink.current %} aria-current="page"{% endif %}
-                                >
-                                  {{ grandchildlink.title | escape }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                        {%- endif -%}
-                      </li>
-                    {%- endfor -%}
-                  </ul>
+              id="MegaMenu-Content-{{ forloop.index }}"
+              class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+              tabindex="-1"
+            >
+              <div class="mega-menu__wrapper page-width">
+                <ul
+                  class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  role="list"
+                >
+                  {%- for childlink in link.links -%}
+                    <li>
+                      <a
+                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                        href="{{ childlink.url }}"
+                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                        {% if childlink.current %} aria-current="page"{% endif %}
+                      >
+                        {{ childlink.title | escape }}
+                      </a>
+                      {%- if childlink.links != blank -%}
+                        <ul class="list-unstyled" role="list">
+                          {%- for grandchildlink in childlink.links -%}
+                            <li>
+                              <a
+                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                href="{{ grandchildlink.url }}"
+                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                {% if grandchildlink.current %} aria-current="page"{% endif %}
+                              >
+                                {{ grandchildlink.title | escape }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
 
-                  {%- if link.title == section.settings.mega_menu_target and section.settings.featured_collection != blank -%}
-                    <div class="mega-menu__products">
-                      {%- assign latest_products = section.settings.featured_collection.products | slice: 0, 4 -%}
-                      {%- for product in latest_products limit: 4 -%}
-                        <div class="mega-menu__product">
-                          <a href="{{ product.url }}">
-                            <img
-                              src="{{ product.featured_image | img_url: '200x' }}"
-                              alt="{{ product.title | escape }}"
-                              loading="lazy"
-                            />
-                            <p class="mega-menu__product-title">{{ product.title }}</p>
-                          </a>
-                        </div>
-                      {%- endfor -%}
-                    </div>
-                  {%- endif -%}
-                </div>
+                {%- if link.title == 'Shop' -%}
+                  <div class="mega-menu__products">
+                    {%- assign latest_products = collections.all.products | sort: 'created_at' | reverse -%}
+                    {%- for product in latest_products limit: 4 -%}
+                      <div class="mega-menu__product">
+                        <a href="{{ product.url }}">
+                          <img
+                            src="{{ product.featured_image | img_url: '200x' }}"
+                            alt="{{ product.title | escape }}"
+                            loading="lazy"
+                          />
+                          <p class="mega-menu__product-title">{{ product.title }}</p>
+                        </a>
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
               </div>
+            </div>
 
             </details>
           </header-menu>
@@ -110,9 +110,8 @@
   </ul>
 </nav>
 
-
 {% stylesheet %}
-  .mega-menu__wrapper {
+.mega-menu__wrapper {
   display: flex;
   gap: 30px;
 }
