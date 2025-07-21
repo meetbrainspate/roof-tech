@@ -4908,6 +4908,49 @@ table.support-page{
     margin-bottom: 0;
     margin-top: 0;
 }
+form#email-form > div {
+    width: calc(50% - 20px);
+    margin-bottom: 10px;
+}
+h2.down-form-h2 {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+form#email-form {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.download-form-block form#email-form input {
+    padding: 1.5rem;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgb(18 18 18 / 40%) !important;
+    margin-bottom: 0 !important;
+}
+form#email-form > div label {
+    font-size: 15px !important;
+    margin-bottom: 6px !important;
+}
+#email-form input#submitbutt[type="submit"] {
+    margin-top: 20px;
+    background-color: #D52722 !important;
+    color: #ffffff;
+    transition: 0.3s all;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 150px;
+    border: 2px solid #D52722 !important;
+}
+#email-form input#submitbutt[type="submit"]:hover{
+    background-color: transparent !important;
+    border: 2px solid #D52722 !important;
+    color: #D52722;
+}
 
 @media screen and (max-width: 1400px){
   .custom-header-row.custom-header-bottom{
@@ -5494,5 +5537,11 @@ table.support-page{
   .svg-wrapper, .svg-wrapper svg {
     width: 13px;
     height: 16px;
+  }
+  form#email-form{
+    flex-direction: column;
+  }
+  form#email-form > div{
+    width: 100%;
   }
 }
