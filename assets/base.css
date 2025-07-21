@@ -4615,6 +4615,7 @@ div#popup-modal.team-popup .popup-content {
     border-bottom: 1px solid #E2E2E2;
     padding-bottom: 15px;
     padding-top: 25px;
+    margin-bottom: 10px;
 }
 .team-popup .popup-detail:before {
     content: "";
