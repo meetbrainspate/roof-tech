@@ -4615,6 +4615,7 @@ div#popup-modal.team-popup .popup-content {
     border-bottom: 1px solid #E2E2E2;
     padding-bottom: 15px;
     padding-top: 25px;
+    margin-bottom: 10px;
 }
 .team-popup .popup-detail:before {
     content: "";
@@ -4795,44 +4796,118 @@ h2.collapsible-content__heading.inline-richtext.h1 {
   background-color: #ffffff;
   color: #D52722;
 }
-.page-width .rte table tbody tr td {
+.page-width .rte table.testimonial-table tbody tr td {
     border: 0;
     background: #fff;
     padding: 30px 20px;
     box-shadow: 0 2px 18px #570f0d14;
     vertical-align: top;
 }
-.page-width .rte table{
+.page-width .rte table.testimonial-table{
   border-collapse: separate;
   border-spacing: 20px;
   border: 0;
   box-shadow: none;
 }
-.page-width .rte table tbody tr td h3 a  {
+.page-width .rte table.testimonial-table tbody tr td h3 a  {
     font-size: 20px;
     line-height: 26px;
     text-decoration: none;
 }
-.page-width .rte table tbody tr td p:nth-of-type(2) {
+.page-width .rte table.testimonial-table tbody tr td p:nth-of-type(2) {
     line-height: 1;
     color: #000;
     font-size: 18px;
     font-weight: 600;
     display: block;
 }
-.page-width .rte table tbody tr td p
+.page-width .rte table.testimonial-table tbody tr td p
  {
     color: #585858;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.6;
 }
-.page-width .rte table tbody tr td:empty{
+.page-width .rte table.testimonial-table tbody tr td:empty, .support-page tr td:empty, 
+.support-page tr td[colspan="5"], .support-page tr td:has(> span:empty), .support-page tr td:empty,
+ .support-page tr td:empty, .support-page tr td:has(strong:empty){
   box-shadow: none;
   padding: 0;
 }
-
-
+.page-width .rte .space-0 {
+  display: none;
+}
+table.support-page{
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 20px;
+      table-layout: unset;
+}
+.support-page tr td {
+  vertical-align: top;
+  max-width: 20%;
+  padding: 20px 20px 0;
+  box-shadow: 0px 2px 18px 0px #570F0D14;
+}
+.support-page tr td a ~ p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.support-page tr td a {
+    line-height: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.support-overflow ~ hr, #support-sect > hr {
+    margin: 3rem 0 5rem;
+}
+.table-download td span, .table-download td a {
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+}
+.support-page tr td:hover {
+    box-shadow: 0px 2px 6px 0px #570F0D14;
+}
+.table-download td span, .table-download td a:hover, .support-page tr td a:hover, .support-page tr td:hover a{
+  color: #D52722;
+}
+.table-download td > p > br {
+    display: none;
+}
+#support-sect h2 a{
+  text-decoration: none;
+}
+.custom-header-bottom .mega-menu__product a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 0px 4px 1px #bbbbbb2e;
+  transition: 0.3s all;
+  width: 100%;
+}
+.custom-header-bottom .mega-menu__product a:hover{
+  box-shadow: none;
+}
+.custom-header-bottom .mega-menu__product a:hover p{
+  color: #D52722;
+}
+.mega-menu__product img {
+  width: 95px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 0;
+}
+.custom-header-bottom .mega-menu__product a p {
+    font-size: 14px;
+    color: #000;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
 
 @media screen and (max-width: 1400px){
   .custom-header-row.custom-header-bottom{
@@ -4922,6 +4997,9 @@ h2.collapsible-content__heading.inline-richtext.h1 {
   .meet-team-section ul.multicolumn-list li{
     padding: 12px;
   }
+  .support-page tr td {
+    max-width: unset;
+  }
 }
 @media screen and (max-width: 990px) {
   .product-section slider-component ul{
@@ -4990,17 +5068,25 @@ h2.collapsible-content__heading.inline-richtext.h1 {
   .page-width .rte.scroll-trigger:has(table) {
     overflow-x: auto;
   }
-  .page-width .rte table {
-      min-width: 700px;
+  .page-width .rte table.testimonial-table {
       border-spacing: 10px;
-      overflow-x: auto;
     }
-  .page-width .rte table tbody tr td{
-    padding: 10px;
-  }
-  .page-width .rte table tbody tr td h3 a {
+    .page-width .rte table.testimonial-table tbody tr td {
+      width: 100% !important;
+      display: block;
+      padding: 15px;
+      height: auto !important;
+      margin-bottom: 20px;
+    }
+  .page-width .rte table.testimonial-table tbody tr td h3 a {
     font-size: 18px;
     line-height: 24px;
+  }
+  table.support-page{
+    border-spacing: 10px;
+  }
+  .support-page tr td{
+    padding: 15px 10px 0;
   }
 }
 @media screen and (max-width: 768px){
@@ -5143,6 +5229,45 @@ h2.collapsible-content__heading.inline-richtext.h1 {
   }
   .contact.contactus-section > div {
     margin-bottom: 40px;
+  }
+ .support-overflow .support-page .support-tr {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: auto !important;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+  .support-page .support-tr {
+    flex-wrap: wrap;
+     display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: auto !important;
+    justify-content: space-between;
+    gap: 10px;
+  } 
+  .support-page .support-tr .support-td {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: calc(50% - 10px);
+    height: auto !important;
+    padding: 20px 10px ;
+    width: 100% !important;
+    display: block;
+  }
+    .support-page .support-tr .support-td:nth-child(odd) {
+      clear: both;
+  }
+  .support-page tr td.support-td[colspan="5"]{
+    max-width: 100%;
+    flex: 0 0 100%;
   }
 }
 @media screen and (max-width: 749px){
