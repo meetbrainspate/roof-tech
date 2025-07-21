@@ -1,0 +1,154 @@
+{% assign layout = 'boxed' %}
+
+{% unless settings.breadcrumb_styles == 'none' %}{% include 'breadcrumb' , _layout : layout %}{% endunless %}
+
+<div class="{% if layout == 'boxed' %}container{% else %}container-fluid{% endif %}">
+  <div id="col-main">
+
+    <div class="page-content">
+      {{ page.content }}
+    </div>
+
+    
+<!--form section-->
+     <div class="download-form-sect wf-section">
+    <div class="download-form-block w-form">
+      <form id="email-form" name="email-form" data-name="Email Form">
+        <h2 class="down-form-h2"><strong>Fill form to unlock files</strong></h2>
+        <div><label for="name" class="down-form-label">Name *</label><input type="text" class="down-form-filed w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your Name" id="name" required=""></div>
+        <div><label for="email" class="down-form-label">Email Address *</label><input type="email" class="down-form-filed w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your Email Address" id="email" required=""></div>
+        <div><label for="state" class="down-form-label">State/Province *</label><input type="text" class="down-form-filed w-input" maxlength="256" name="state" data-name="state" placeholder="Enter your state" id="state" required=""></div>
+        <div><label for="phone" class="down-form-label">Phone *</label><input type="tel" class="down-form-filed w-input" maxlength="256" name="phone" data-name="phone" placeholder="Enter your phone number" id="phone" required=""></div>
+        <input id="submitbutt" type="submit" data-wait="Please wait..." class="down-form-butt w-button">
+      </form>      
+    </div>
+  </div>
+
+  
+
+  </div>
+</div>
+
+<script>
+  $( document ).ready(function() {
+
+    var pagepath = {{ request.path | json }}
+    
+console.log(pagepath)
+    
+  var saveduser = JSON.parse(localStorage.getItem('userdetail'));
+  $('td a').click(function(){
+    if(this.className != 'lang_link') {
+   saveduser = JSON.parse(localStorage.getItem('userdetail')) 
+            $.post("https://roof-tech-db.uc.r.appspot.com/api", {
+        "name" : saveduser.name,
+        "email" : saveduser.email,
+        "state" : saveduser["state"],
+        "phone" : saveduser.phone,
+        "apex" :  this.innerText == '' ? this.parentElement.parentElement.querySelector('strong').innerText : this.innerText ,
+         "file_link" : pagepath != '/pages/stamped-p-e-letters-ibc-and-irc-compliant' ? this.href : '',
+          "pe_letter" : pagepath == '/pages/stamped-p-e-letters-ibc-and-irc-compliant' ? this.href : ''    
+        }, function(result){
+            console.log(result);
+          });
+    }   
+  })
+    
+    if(saveduser != null) { $('#email-form').hide()   }
+    else { 
+      console.log($('#support-sect').length )
+   $('#support-sect').length > 0 ?  $('#support-sect').hide()   : $('.page-content').hide()
+    }
+
+    $('#submitbutt').click(function(ev){
+      if($('#email-form')[0].checkValidity()) {       
+      ev.preventDefault()
+      let userobj = { "name" : $('#name').val(), "email" : $('#email').val(), "state" : $('#state').val(), "phone" : $('#phone').val()  }  
+      localStorage.setItem('userdetail', JSON.stringify(userobj)); 
+      $('#email-form').hide() 
+      $('#support-sect').length > 0 ? $('#support-sect').show() :  $('.page-content').show() 
+      } 
+   })
+    
+  })
+</script>
+
+<style>
+  .download-form-sect {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #f6f6f6;
+}
+
+.download-form-block {
+  width: 50%;
+  margin-right: auto;
+  margin-left:auto;
+}
+
+.down-form-h2 {
+  margin-bottom: 15px;
+  background-color: transparent;
+  color: #d9302b;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.down-form-label {
+  margin-bottom: 10px !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  display: block;
+}
+
+.down-form-filed {
+  height: 45px !important;
+  margin-bottom: 15px !important;
+  border: 1px solid #000 !important;
+  width:100%;
+    color: black !important;
+}
+
+.down-form-filed::-webkit-input-placeholder {
+  font-size: 15px;
+}
+
+.down-form-filed:-ms-input-placeholder {
+  font-size: 15px;
+}
+
+.down-form-filed::-ms-input-placeholder {
+  font-size: 15px;
+}
+
+.down-form-filed::placeholder {
+  font-size: 15px;
+}
+
+.down-form-butt {
+  display: block;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left:auto;
+  padding: 15px 25px;
+  background-color: #d9302b !important;
+  font-size: 24px;
+  line-height: 1.2;
+  border:none;
+  color:white;
+}
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+     .download-form-block {
+     width:75%;
+     }
+   }
+  @media only screen and (min-device-width: 350px) and (max-device-width: 767px) {
+     .download-form-block {
+     width:95%;
+     }
+   }
+  
+</style>
+
