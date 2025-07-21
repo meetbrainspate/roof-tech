@@ -1531,7 +1531,8 @@ details[open] > .share-button__fallback {
 .share-button__fallback .field__input:focus,
 .share-button__fallback .field__input:-webkit-autofill {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: 0.1rem;
+  outline-offset: 0.
+  1rem;
   box-shadow: 0 0 0 0.1rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -1760,7 +1761,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer .field input:not(:placeholder-shown),
 .customer .field input:-webkit-autofill {
-  padding: 2.2rem 1.5rem 0.8rem 2rem;
+  padding: 0.8rem 1.5rem 0.8rem 2rem;
   margin: var(--inputs-border-width);
 }
 
@@ -4202,7 +4203,7 @@ div#counter-stats {
   margin-top: 0;
 }
 .footer__column-two .footer-block {
-    flex: 0 0 calc(33% - 14px);
+    flex: 0 0 calc(33% - 15px);
 }
 .footer__column-two .footer-block h2.footer-block__heading {
   font-size: 20px;
@@ -4734,6 +4735,104 @@ h2.collapsible-content__heading.inline-richtext.h1 {
     width: 16px;
     height: auto;
 }
+.milestone-timeline .timeline-item.left {
+    text-align: start;
+}
+.milestone-timeline .timeline-item.left h3.year {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.contact.contactus-section {
+    display: flex;
+    gap: 24px;
+}
+.contact.contactus-section > div {
+    flex: 0 0 calc(50% - 12px);
+}
+.contact-detail > ul.address-detail {
+    list-style-type: none;
+    padding-left: 0;
+}
+.contact-detail > ul.address-detail li a {
+    color: rgba(var(--color-foreground), 0.75);
+    text-decoration: none;
+}
+.contact-detail ul.social-links {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 10px;
+}
+.contact-detail ul.social-links li a{
+    border: 1px solid #E2E2E2;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-detail ul.social-links li a:hover{
+  background-color: #D52722;
+}
+.contact-detail ul.social-links li a:hover svg{
+  filter: brightness(0) invert(1);
+}
+.contact__button button.button{
+  background-color: #D52722;
+  color: #ffffff;
+  transition: 0.3s all;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.contact__button button.button::before, .contact__button button.button::after{
+  box-shadow: none;
+}
+.contact__button button.button:hover::after{
+    box-shadow: 0 0 0 2px #D52722;
+}
+.contact__button button.button:hover{
+  background-color: #ffffff;
+  color: #D52722;
+}
+.page-width .rte table tbody tr td {
+    border: 0;
+    background: #fff;
+    padding: 30px 20px;
+    box-shadow: 0 2px 18px #570f0d14;
+    vertical-align: top;
+}
+.page-width .rte table{
+  border-collapse: separate;
+  border-spacing: 20px;
+  border: 0;
+  box-shadow: none;
+}
+.page-width .rte table tbody tr td h3 a  {
+    font-size: 20px;
+    line-height: 26px;
+    text-decoration: none;
+}
+.page-width .rte table tbody tr td p:nth-of-type(2) {
+    line-height: 1;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+}
+.page-width .rte table tbody tr td p
+ {
+    color: #585858;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.page-width .rte table tbody tr td:empty{
+  box-shadow: none;
+  padding: 0;
+}
+
+
 
 @media screen and (max-width: 1400px){
   .custom-header-row.custom-header-bottom{
@@ -4881,12 +4980,33 @@ h2.collapsible-content__heading.inline-richtext.h1 {
     margin-right: 15px;
   }
   .facets__form .product-count{
-            display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        grid-column: 1 / -1;
-        grid-row: 1;
-        margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 10px;
+  }
+  .page-width .rte.scroll-trigger:has(table) {
+    overflow-x: auto;
+  }
+  .page-width .rte table {
+      min-width: 700px;
+      border-spacing: 10px;
+      overflow-x: auto;
+    }
+  .page-width .rte table tbody tr td{
+    padding: 10px;
+  }
+  .page-width .rte table tbody tr td h3 a {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 768px){
+  .milestone-timeline .timeline-item.left h3.year {
+    text-align: start;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 767px){
@@ -5017,6 +5137,12 @@ h2.collapsible-content__heading.inline-richtext.h1 {
   }
   h2.collapsible-content__heading.inline-richtext.h1{
     font-size: 28px;
+  }
+  .contact.contactus-section {
+    display: block;
+  }
+  .contact.contactus-section > div {
+    margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 749px){
