@@ -15,9 +15,21 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_Hgnxqi": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"download-form-sect wf-section\">\n    <div class=\"download-form-block w-form\">\n      <form id=\"email-form\" name=\"email-form\" data-name=\"Email Form\">\n        <h2 class=\"down-form-h2\"><strong>Fill form to unlock files</strong></h2>\n        <div><label for=\"name\" class=\"down-form-label\">Name *</label><input type=\"text\" class=\"down-form-filed w-input\" maxlength=\"256\" name=\"name\" data-name=\"Name\" placeholder=\"Enter your Name\" id=\"name\" required=\"\"></div>\n        <div><label for=\"email\" class=\"down-form-label\">Email Address *</label><input type=\"email\" class=\"down-form-filed w-input\" maxlength=\"256\" name=\"email\" data-name=\"Email\" placeholder=\"Enter your Email Address\" id=\"email\" required=\"\"></div>\n        <div><label for=\"state\" class=\"down-form-label\">State/Province *</label><input type=\"text\" class=\"down-form-filed w-input\" maxlength=\"256\" name=\"state\" data-name=\"state\" placeholder=\"Enter your state\" id=\"state\" required=\"\"></div>\n        <div><label for=\"phone\" class=\"down-form-label\">Phone *</label><input type=\"tel\" class=\"down-form-filed w-input\" maxlength=\"256\" name=\"phone\" data-name=\"phone\" placeholder=\"Enter your phone number\" id=\"phone\" required=\"\"></div>\n        <input id=\"submitbutt\" type=\"submit\" data-wait=\"Please wait...\" class=\"down-form-butt w-button\">\n      </form>      \n    </div>\n  </div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_Hgnxqi"
   ]
 }
