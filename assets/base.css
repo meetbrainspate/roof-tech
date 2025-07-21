@@ -3901,7 +3901,7 @@ section.shopify-section:has(.product-section){
   position: relative;
 }
 .custom-header-bottom a {
-    margin: 0 15px;
+    margin: 0 8px;
     text-decoration: none;
 }
 .blog.post-section .blog__posts{
@@ -4951,16 +4951,68 @@ form#email-form > div label {
     border: 2px solid #D52722 !important;
     color: #D52722;
 }
-
+details#Details-HeaderMenu-1, details#Details-HeaderMenu-4, details#Details-HeaderMenu-5 ,details#Details-HeaderMenu-7{
+    position: relative;
+}
+details#Details-HeaderMenu-1 summary ~ div, details#Details-HeaderMenu-4 summary ~ div , 
+details#Details-HeaderMenu-5 summary ~ div, details#Details-HeaderMenu-7 summary ~ div {
+    min-width: 250px;
+    position: absolute;
+    left: 0;
+}
+details#Details-HeaderMenu-1 summary ~ div ul, details#Details-HeaderMenu-4 summary ~ div ul,
+ details#Details-HeaderMenu-5 summary ~ div ul, details#Details-HeaderMenu-7 summary ~ div ul{
+  padding-left: 0;
+}
+div#MegaMenu-Content-2.mega-menu__content .mega-menu__wrapper.page-width {
+    background-color: #ffffff;
+    padding: 30px 20px;
+}
+div#MegaMenu-Content-2 {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+.header--middle-left .header__inline-menu header-menu summary {
+    margin: 0 7px;
+}
 @media screen and (max-width: 1400px){
   .custom-header-row.custom-header-bottom{
-    justify-content: flex-start;
+    justify-content: center;
   }
   .subpage-banner{
     background-position: top -80px left;
   }
+  .custom-header-bottom a {
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .header--middle-left .header__inline-menu header-menu summary {
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 9px 27px 9px 12px;
+    margin: 0 3px;
+  }
+  li a#HeaderMenu-contact-us{
+        font-size: 10px;
+    padding: 11px 40px 11px 10px;
+  }
+  .list-menu--inline{
+    align-items: center;
+  }
 }
 @media screen and (max-width: 1199px){
+   .custom-header-row.custom-header-bottom{
+    justify-content: start;
+  }
+  /* details#Details-HeaderMenu-1 summary ~ div, details#Details-HeaderMenu-4 summary ~ div , 
+  details#Details-HeaderMenu-5 summary ~ div, details#Details-HeaderMenu-7 summary ~ div {
+      left: 0;
+  } */
+   .header--middle-left .header__inline-menu header-menu summary{    
+        padding: 8px 27px 8px 12px;
+   }
   .product-section slider-component ul li h3{
     font-size: 18px;
   }
@@ -4968,8 +5020,8 @@ form#email-form > div label {
     padding: 0;
     padding-right: 1rem;
   }
-  .custom-header-bottom a, .custom-header-bottom header-menu .header__menu-item span{
-    padding: 8px 10px;
+  .custom-header-bottom a, .custom-header-bottom header-menu .header__menu-item{
+    padding: 8px;
     margin: 0 6px;
     text-decoration: none;
     font-size: 12px;
