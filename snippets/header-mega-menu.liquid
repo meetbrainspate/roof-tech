@@ -65,7 +65,7 @@
                   {%- endfor -%}
                 </ul>
 
-                {%- if link.title == 'Shop' -%}
+                {%- if link.title == 'Products' -%}
                   <div class="mega-menu__products">
                     {%- assign latest_products = collections.all.products | sort: 'created_at' | reverse -%}
                     {%- for product in latest_products limit: 4 -%}
