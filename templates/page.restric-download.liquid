@@ -1,7 +1,5 @@
 {% assign layout = 'boxed' %}
 
-{% unless settings.breadcrumb_styles == 'none' %}{% include 'breadcrumb' , _layout : layout %}{% endunless %}
-
 <div class="{% if layout == 'boxed' %}container{% else %}container-fluid{% endif %}">
   <div id="col-main">
 
