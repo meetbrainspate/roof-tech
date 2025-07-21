@@ -52,7 +52,9 @@
         "enable_customer_avatar": true,
         "margin_bottom": 0,
         "padding_top": 0,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "mega_menu_target": "Shop",
+        "featured_collection": "accessories"
       }
     }
   },

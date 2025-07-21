@@ -26,12 +26,13 @@
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
               <div
-                id="MegaMenu-Content-{{ forloop.index }}"
-                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
-                tabindex="-1"
-              >
+              id="MegaMenu-Content-{{ forloop.index }}"
+              class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+              tabindex="-1"
+            >
+              <div class="mega-menu__wrapper page-width">
                 <ul
-                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
                   {%- for childlink in link.links -%}
@@ -40,9 +41,7 @@
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                         href="{{ childlink.url }}"
                         class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
+                        {% if childlink.current %} aria-current="page"{% endif %}
                       >
                         {{ childlink.title | escape }}
                       </a>
@@ -54,9 +53,7 @@
                                 id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
                                 href="{{ grandchildlink.url }}"
                                 class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
+                                {% if grandchildlink.current %} aria-current="page"{% endif %}
                               >
                                 {{ grandchildlink.title | escape }}
                               </a>
@@ -67,7 +64,27 @@
                     </li>
                   {%- endfor -%}
                 </ul>
+
+                {%- if link.title == 'Shop' -%}
+                  <div class="mega-menu__products">
+                    {%- assign latest_products = collections.all.products | sort: 'created_at' | reverse -%}
+                    {%- for product in latest_products limit: 4 -%}
+                      <div class="mega-menu__product">
+                        <a href="{{ product.url }}">
+                          <img
+                            src="{{ product.featured_image | img_url: '200x' }}"
+                            alt="{{ product.title | escape }}"
+                            loading="lazy"
+                          />
+                          <p class="mega-menu__product-title">{{ product.title }}</p>
+                        </a>
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
               </div>
+            </div>
+
             </details>
           </header-menu>
         {%- else -%}
@@ -92,3 +109,39 @@
     {%- endfor -%}
   </ul>
 </nav>
+
+{% stylesheet %}
+.mega-menu__wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.mega-menu__list {
+  flex: 1;
+}
+
+.mega-menu__products {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mega-menu__product {
+  width: calc(50% - 8px);
+}
+
+.mega-menu__product img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.mega-menu__product-title {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+{% endstylesheet %}
