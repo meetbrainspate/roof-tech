@@ -121,7 +121,7 @@
       "settings": {
         "image": "shopify://shop_images/nextgen-rooftop.png",
         "youtube_video_link": "ujwq0PpUqr8",
-        "height": "adapt",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
