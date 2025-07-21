@@ -9,6 +9,35 @@
  */
 {
   "sections": {
+    "image_banner_WAk9mc": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_NjJKQR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Testimonials",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NjJKQR"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/subpage-banner.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "top-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "left",
+        "show_text_below": true
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -18,6 +47,7 @@
     }
   },
   "order": [
+    "image_banner_WAk9mc",
     "main"
   ]
 }
