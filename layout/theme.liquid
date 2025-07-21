@@ -255,6 +255,82 @@
           font-size: 1.6rem;
         }
       }
+
+      .download-form-sect {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #f6f6f6;
+}
+
+.download-form-block {
+  width: 50%;
+  margin-right: auto;
+  margin-left:auto;
+}
+
+.down-form-h2 {
+  margin-bottom: 15px;
+  background-color: transparent;
+  color: #d9302b;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.down-form-label {
+  margin-bottom: 10px !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  display: block;
+}
+
+.down-form-filed {
+  height: 45px !important;
+  margin-bottom: 15px !important;
+  border: 1px solid #000 !important;
+  width:100%;
+    color: black !important;
+}
+
+.down-form-filed::-webkit-input-placeholder {
+  font-size: 15px;
+}
+
+.down-form-filed:-ms-input-placeholder {
+  font-size: 15px;
+}
+
+.down-form-filed::-ms-input-placeholder {
+  font-size: 15px;
+}
+
+.down-form-filed::placeholder {
+  font-size: 15px;
+}
+
+.down-form-butt {
+  display: block;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left:auto;
+  padding: 15px 25px;
+  background-color: #d9302b !important;
+  font-size: 24px;
+  line-height: 1.2;
+  border:none;
+  color:white;
+}
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+     .download-form-block {
+     width:75%;
+     }
+   }
+  @media only screen and (min-device-width: 350px) and (max-device-width: 767px) {
+     .download-form-block {
+     width:95%;
+     }
+   }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -422,6 +498,49 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script>
+  $( document ).ready(function() {
+
+    var pagepath = {{ request.path | json }}
+    
+console.log(pagepath)
+    
+  var saveduser = JSON.parse(localStorage.getItem('userdetail'));
+  $('td a').click(function(){
+    if(this.className != 'lang_link') {
+   saveduser = JSON.parse(localStorage.getItem('userdetail')) 
+            $.post("https://roof-tech-db.uc.r.appspot.com/api", {
+        "name" : saveduser.name,
+        "email" : saveduser.email,
+        "state" : saveduser["state"],
+        "phone" : saveduser.phone,
+        "apex" :  this.innerText == '' ? this.parentElement.parentElement.querySelector('strong').innerText : this.innerText ,
+         "file_link" : pagepath != '/pages/stamped-p-e-letters-ibc-and-irc-compliant' ? this.href : '',
+          "pe_letter" : pagepath == '/pages/stamped-p-e-letters-ibc-and-irc-compliant' ? this.href : ''    
+        }, function(result){
+            console.log(result);
+          });
+    }   
+  })
+    
+    if(saveduser != null) { $('#email-form').hide()   }
+    else { 
+      console.log($('#support-sect').length )
+   $('#support-sect').length > 0 ?  $('#support-sect').hide()   : $('.page-content').hide()
+    }
+
+    $('#submitbutt').click(function(ev){
+      if($('#email-form')[0].checkValidity()) {       
+      ev.preventDefault()
+      let userobj = { "name" : $('#name').val(), "email" : $('#email').val(), "state" : $('#state').val(), "phone" : $('#phone').val()  }  
+      localStorage.setItem('userdetail', JSON.stringify(userobj)); 
+      $('#email-form').hide() 
+      $('#support-sect').length > 0 ? $('#support-sect').show() :  $('.page-content').show() 
+      } 
+   })
+    
+  })
+</script>
 
     <div id="popup-modal" class="popup-overlay team-popup" style="display:none;">
       <div class="popup-content">
