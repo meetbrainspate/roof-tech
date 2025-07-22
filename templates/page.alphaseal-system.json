@@ -71,7 +71,8 @@
       ],
       "custom_css": [
         ".meet-team-section ul.multicolumn-list li {padding: 0; background: none; border: 0;}",
-        ".meet-team-section .multicolumn-card-spacing{background: none;}"
+        ".meet-team-section .multicolumn-card-spacing {background: none;}",
+        ".meet-team-section .multicolumn-card-spacing img {width: auto; height: auto; inset: 0; margin: auto;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -87,8 +88,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 40
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "image_with_text_mdj9pz": {
