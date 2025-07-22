@@ -169,56 +169,77 @@
         "logo_TdP7dU": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/nabcep_certified.png",
+            "logo": "shopify://shop_images/logo1.png",
             "link": ""
           }
         },
         "logo_3YaQGb": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/master_certified_badge.png",
+            "logo": "shopify://shop_images/logo2.png",
             "link": ""
           }
         },
         "logo_7BC3iJ": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Screen_Shot_2024-04-30_at_8.30.14_AM.png",
+            "logo": "shopify://shop_images/logo3.png",
             "link": ""
           }
         },
         "logo_zDPmEa": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/soligent.png",
+            "logo": "shopify://shop_images/logo4.png",
             "link": ""
           }
         },
         "logo_EDwE3U": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/cooper_electric_supply_logo.jpg",
+            "logo": "shopify://shop_images/logo6.png",
+            "link": ""
+          }
+        },
+        "logo_cfWQxD": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo7.png",
             "link": ""
           }
         },
         "logo_gFVWLJ": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Butyl_Badge4.png",
+            "logo": "shopify://shop_images/logo8.png",
             "link": ""
           }
         },
         "logo_6jehPg": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/AlphaSeal_updated_2023.png",
+            "logo": "shopify://shop_images/logo9.png",
             "link": ""
           }
         },
         "logo_TUU777": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/lBorderStates-Logo-White-Text-l.png",
+            "logo": "shopify://shop_images/logo10.png",
+            "link": ""
+          }
+        },
+        "logo_wqqjhh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo11.png",
+            "link": ""
+          }
+        },
+        "logo_Y3hLzW": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo12.png",
             "link": ""
           }
         }
@@ -229,9 +250,12 @@
         "logo_7BC3iJ",
         "logo_zDPmEa",
         "logo_EDwE3U",
+        "logo_cfWQxD",
         "logo_gFVWLJ",
         "logo_6jehPg",
-        "logo_TUU777"
+        "logo_TUU777",
+        "logo_wqqjhh",
+        "logo_Y3hLzW"
       ],
       "name": "Logo Carousel",
       "settings": {
